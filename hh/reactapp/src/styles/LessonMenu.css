@@ -4,12 +4,11 @@
 }
 
 .background{
-  background-color: #6FA2F6;
-  opacity: 1;
-  background-image:  repeating-linear-gradient(45deg, #8ce0cd 25%, transparent 25%, transparent 75%, #8ce0cd 75%, #8ce0cd), repeating-linear-gradient(45deg, #8ce0cd 25%, #6FA2F6 25%, #6FA2F6 75%, #8ce0cd 75%, #8ce0cd);
-  background-position: 0 0, 29px 29px;
-  background-size: 58.2px 58.2px;
-  height:100vh;
+  background-image: url('../images/site-background1.gif');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
   display: flex;
   align-items: center;
   flex-direction: column;
