@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Pixel';
+  src: url('../fonts/3997-font.otf') format('opentype');
+}
+.big-container{
+  background-color: #6FA2F6;
+  opacity: 1;
+  background-image:  repeating-linear-gradient(45deg, #8ce0cd 25%, transparent 25%, transparent 75%, #8ce0cd 75%, #8ce0cd), repeating-linear-gradient(45deg, #8ce0cd 25%, #6FA2F6 25%, #6FA2F6 75%, #8ce0cd 75%, #8ce0cd);
+  background-position: 0 0, 29px 29px;
+  background-size: 58.2px 58.2px;
+}
+.container {
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center;     /* Vertically center content */
+  height: 100vh; 
+  height: 100vh;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.start-menu {
+  width: 350px;
+  height: 250px;
+  background-color: rgb(16, 16, 16);
+  text-align: center;
+  font-family: 'Pixel';
+  font-size: 40px;
+  line-height: 25px;
+  border: 33px solid;
+  border-radius: 50px;
+  border-image: url(https://imgur.com/U7m9WXl.png) 33 round;
+  position: relative;
+}
+
+.start-buttons {
+  color: rgb(228, 228, 228);
+  display: block;
+  margin-bottom: 40px;
+}
+
+.start{
+  margin-top: 40px;
+}
+
+.start-buttons:hover{
+  cursor: pointer;
+}
+
+.login-menu{
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.lr{
+  text-align: center;
+  margin-bottom: 5px;
+  border: 10px solid;
+  border-radius: 50px;
+  border-image: url(https://imgur.com/U7m9WXl.png) 33 round;
+  position: relative;
+  color: rgb(228, 228, 228);
+  background-color: rgb(16, 16, 16);
+  font-family: 'Pixel';
+  font-size: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.lr:hover{
+  cursor: pointer;
+}
