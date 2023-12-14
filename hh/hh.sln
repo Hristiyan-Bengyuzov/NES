@@ -7,6 +7,12 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "reactapp", "reactapp\reacta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi", "webapi\webapi.csproj", "{D833C962-3175-4302-A893-5C521CCCB7AA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{918C5017-DE46-4FB3-9EFF-A54784A7BE35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoEducationSystem.Data", "NeoEducationSystem.Data\NeoEducationSystem.Data.csproj", "{29BEAD25-81C0-4866-8CA0-9D108FE7A19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoEducationSystem.Data.Models", "NeoEducationSystem.Data.Models\NeoEducationSystem.Data.Models.csproj", "{41EE2950-2ADC-4404-9553-BC419004990C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,9 +29,21 @@ Global
 		{D833C962-3175-4302-A893-5C521CCCB7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D833C962-3175-4302-A893-5C521CCCB7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D833C962-3175-4302-A893-5C521CCCB7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29BEAD25-81C0-4866-8CA0-9D108FE7A19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BEAD25-81C0-4866-8CA0-9D108FE7A19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BEAD25-81C0-4866-8CA0-9D108FE7A19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BEAD25-81C0-4866-8CA0-9D108FE7A19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41EE2950-2ADC-4404-9553-BC419004990C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41EE2950-2ADC-4404-9553-BC419004990C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41EE2950-2ADC-4404-9553-BC419004990C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41EE2950-2ADC-4404-9553-BC419004990C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29BEAD25-81C0-4866-8CA0-9D108FE7A19F} = {918C5017-DE46-4FB3-9EFF-A54784A7BE35}
+		{41EE2950-2ADC-4404-9553-BC419004990C} = {918C5017-DE46-4FB3-9EFF-A54784A7BE35}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D234E063-79AD-4201-BEAF-45F8E2ABAA17}

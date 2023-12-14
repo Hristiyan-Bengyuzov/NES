@@ -1,2 +1,4 @@
 C:\Users\storm\Downloads\stuf\itstuff\react\website\hh\reactapp\obj\Debug\reactapp.esproj.SuggestedBindingRedirects.cache
 C:\Users\storm\Downloads\stuf\itstuff\react\website\hh\reactapp\obj\Debug\reactapp.esproj.CoreCompileInputs.cache
+C:\Users\Hristian\Desktop\NES\hh\reactapp\obj\Debug\reactapp.esproj.SuggestedBindingRedirects.cache
+C:\Users\Hristian\Desktop\NES\hh\reactapp\obj\Debug\reactapp.esproj.CoreCompileInputs.cache

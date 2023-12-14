@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\webapi.csproj": {}
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\webapi.csproj": {
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\webapi.csproj",
-        "projectName": "webapi",
-        "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\webapi.csproj",
+        "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
+        "projectName": "NeoEducationSystem.Data.Models",
+        "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
         "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\obj\\",
+        "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,13 +40,13 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.7, )"
+              "version": "[7.0.14, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[7.0.14, )"
             }
           },
           "imports": [
@@ -61,9 +61,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
