@@ -6,7 +6,9 @@ namespace NeoEducationSystem.Data;
 
 public class NeoEducationDbContext : IdentityDbContext<ApplicationUser>
 {
-    public DbSet<Course> Courses { get; set; }
-    public DbSet<Lesson> Lessons { get; set; }
-    public DbSet<Paragraph> Paragraphs { get; set; }
+	public NeoEducationDbContext(DbContextOptions<NeoEducationDbContext> options) : base(options) { }
+
+	public DbSet<Course> Courses { get; set; }
+	public DbSet<Lesson> Lessons { get; set; }
+	public DbSet<Paragraph> Paragraphs { get; set; }
 }

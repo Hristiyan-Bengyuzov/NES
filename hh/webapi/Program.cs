@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using NeoEducationSystem.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+string connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+builder.Services.AddDbContext<NeoEducationDbContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 
@@ -22,4 +29,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();

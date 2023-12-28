@@ -1,0 +1,17 @@
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\bin\Debug\net7.0\NeoEducationSystem.Data.deps.json
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\bin\Debug\net7.0\NeoEducationSystem.Data.runtimeconfig.json
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\bin\Debug\net7.0\NeoEducationSystem.Data.dll
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\bin\Debug\net7.0\NeoEducationSystem.Data.pdb
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\bin\Debug\net7.0\NeoEducationSystem.Data.Models.dll
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\bin\Debug\net7.0\NeoEducationSystem.Data.Models.pdb
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.csproj.AssemblyReference.cache
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.AssemblyInfoInputs.cache
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.AssemblyInfo.cs
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.csproj.CopyComplete
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.dll
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\refint\NeoEducationSystem.Data.dll
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.pdb
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\NeoEducationSystem.Data.genruntimeconfig.cache
+C:\Users\Hris\Desktop\NES\hh\NeoEducationSystem.Data\obj\Debug\net7.0\ref\NeoEducationSystem.Data.dll
