@@ -1,0 +1,12 @@
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\bin\Debug\net7.0\NeoEducationSystem.Web.DTOs.deps.json
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\bin\Debug\net7.0\NeoEducationSystem.Web.DTOs.dll
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\bin\Debug\net7.0\NeoEducationSystem.Web.DTOs.pdb
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\NeoEducationSystem.Web.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\NeoEducationSystem.Web.DTOs.AssemblyInfoInputs.cache
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\NeoEducationSystem.Web.DTOs.AssemblyInfo.cs
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\NeoEducationSystem.Web.DTOs.csproj.CoreCompileInputs.cache
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\NeoEducationSystem.Web.DTOs.sourcelink.json
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\NeoEducationSystem.Web.DTOs.dll
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\refint\NeoEducationSystem.Web.DTOs.dll
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\NeoEducationSystem.Web.DTOs.pdb
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Web.DTOs\obj\Debug\net7.0\ref\NeoEducationSystem.Web.DTOs.dll

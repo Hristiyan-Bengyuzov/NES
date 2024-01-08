@@ -9,9 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi", "webapi\webapi.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{918C5017-DE46-4FB3-9EFF-A54784A7BE35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoEducationSystem.Data", "NeoEducationSystem.Data\NeoEducationSystem.Data.csproj", "{29BEAD25-81C0-4866-8CA0-9D108FE7A19F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoEducationSystem.Data", "NeoEducationSystem.Data\NeoEducationSystem.Data.csproj", "{29BEAD25-81C0-4866-8CA0-9D108FE7A19F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoEducationSystem.Data.Models", "NeoEducationSystem.Data.Models\NeoEducationSystem.Data.Models.csproj", "{41EE2950-2ADC-4404-9553-BC419004990C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoEducationSystem.Data.Models", "NeoEducationSystem.Data.Models\NeoEducationSystem.Data.Models.csproj", "{41EE2950-2ADC-4404-9553-BC419004990C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B6293F03-9860-4690-B088-E23343EB9100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoEducationSystem.Services.Data", "NeoEducationSystem.Services.Data\NeoEducationSystem.Services.Data.csproj", "{9AB65E7E-A6AC-4A13-91E5-6A4ECF756947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoEducationSystem.Web.DTOs", "NeoEducationSystem.Web.DTOs\NeoEducationSystem.Web.DTOs.csproj", "{FBBC99BE-369F-4700-A118-EA9504DB910B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +43,14 @@ Global
 		{41EE2950-2ADC-4404-9553-BC419004990C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41EE2950-2ADC-4404-9553-BC419004990C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41EE2950-2ADC-4404-9553-BC419004990C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB65E7E-A6AC-4A13-91E5-6A4ECF756947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB65E7E-A6AC-4A13-91E5-6A4ECF756947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB65E7E-A6AC-4A13-91E5-6A4ECF756947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB65E7E-A6AC-4A13-91E5-6A4ECF756947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBC99BE-369F-4700-A118-EA9504DB910B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBC99BE-369F-4700-A118-EA9504DB910B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBC99BE-369F-4700-A118-EA9504DB910B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBC99BE-369F-4700-A118-EA9504DB910B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +58,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{29BEAD25-81C0-4866-8CA0-9D108FE7A19F} = {918C5017-DE46-4FB3-9EFF-A54784A7BE35}
 		{41EE2950-2ADC-4404-9553-BC419004990C} = {918C5017-DE46-4FB3-9EFF-A54784A7BE35}
+		{9AB65E7E-A6AC-4A13-91E5-6A4ECF756947} = {B6293F03-9860-4690-B088-E23343EB9100}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D234E063-79AD-4201-BEAF-45F8E2ABAA17}

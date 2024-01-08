@@ -3079,19 +3079,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hris\\.nuget\\packages\\": {}
+    "C:\\Users\\Hristian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj",
       "projectName": "NeoEducationSystem.Data",
-      "projectPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj",
-      "packagesPath": "C:\\Users\\Hris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\obj\\",
+      "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj",
+      "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3105,8 +3105,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj"
+            "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj"
             }
           }
         }
@@ -3158,7 +3158,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

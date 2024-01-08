@@ -1,0 +1,16 @@
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\bin\Debug\net7.0\NeoEducationSystem.Services.Data.deps.json
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\bin\Debug\net7.0\NeoEducationSystem.Services.Data.dll
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\bin\Debug\net7.0\NeoEducationSystem.Services.Data.pdb
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\bin\Debug\net7.0\NeoEducationSystem.Data.Models.dll
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\bin\Debug\net7.0\NeoEducationSystem.Data.Models.pdb
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.csproj.AssemblyReference.cache
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.AssemblyInfoInputs.cache
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.AssemblyInfo.cs
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.csproj.CoreCompileInputs.cache
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.sourcelink.json
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.csproj.CopyComplete
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.dll
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\refint\NeoEducationSystem.Services.Data.dll
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\NeoEducationSystem.Services.Data.pdb
+C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Services.Data\obj\Debug\net7.0\ref\NeoEducationSystem.Services.Data.dll

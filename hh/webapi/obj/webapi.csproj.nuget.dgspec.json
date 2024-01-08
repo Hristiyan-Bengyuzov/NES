@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hris\\Desktop\\NES\\hh\\webapi\\webapi.csproj": {}
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\webapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
         "projectName": "NeoEducationSystem.Data.Models",
-        "projectPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
-        "packagesPath": "C:\\Users\\Hris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\obj\\",
+        "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,21 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj": {
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj",
         "projectName": "NeoEducationSystem.Data",
-        "projectPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj",
-        "packagesPath": "C:\\Users\\Hris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\obj\\",
+        "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj",
+        "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,8 +93,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj"
+              "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj"
               }
             }
           }
@@ -146,21 +146,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Hris\\Desktop\\NES\\hh\\webapi\\webapi.csproj": {
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hris\\Desktop\\NES\\hh\\webapi\\webapi.csproj",
-        "projectName": "webapi",
-        "projectPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\webapi\\webapi.csproj",
-        "packagesPath": "C:\\Users\\Hris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\webapi\\obj\\",
+        "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj",
+        "projectName": "NeoEducationSystem.Services.Data",
+        "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj",
+        "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,8 +174,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj": {
-                "projectPath": "C:\\Users\\Hris\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj"
+              "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj"
               }
             }
           }
@@ -190,6 +190,144 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj",
+        "projectName": "NeoEducationSystem.Web.DTOs",
+        "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj",
+        "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\webapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\webapi.csproj",
+        "projectName": "webapi",
+        "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\webapi.csproj",
+        "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\webapi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj": {
+                "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data\\NeoEducationSystem.Data.csproj"
+              },
+              "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj": {
+                "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj"
+              },
+              "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj": {
+                "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.7, )"
@@ -203,6 +341,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             }
           },
           "imports": [
@@ -224,7 +366,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
