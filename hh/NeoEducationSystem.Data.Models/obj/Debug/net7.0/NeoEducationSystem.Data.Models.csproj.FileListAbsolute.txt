@@ -23,3 +23,15 @@ C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0
 C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\refint\NeoEducationSystem.Data.Models.dll
 C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\NeoEducationSystem.Data.Models.pdb
 C:\Users\Hristian\Desktop\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\ref\NeoEducationSystem.Data.Models.dll
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\bin\Debug\net7.0\NeoEducationSystem.Data.Models.deps.json
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\bin\Debug\net7.0\NeoEducationSystem.Data.Models.dll
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\bin\Debug\net7.0\NeoEducationSystem.Data.Models.pdb
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\NeoEducationSystem.Data.Models.csproj.AssemblyReference.cache
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\NeoEducationSystem.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\NeoEducationSystem.Data.Models.AssemblyInfoInputs.cache
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\NeoEducationSystem.Data.Models.AssemblyInfo.cs
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\NeoEducationSystem.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\NeoEducationSystem.Data.Models.dll
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\refint\NeoEducationSystem.Data.Models.dll
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\NeoEducationSystem.Data.Models.pdb
+C:\Users\storm\Documents\GitHub\NES\hh\NeoEducationSystem.Data.Models\obj\Debug\net7.0\ref\NeoEducationSystem.Data.Models.dll

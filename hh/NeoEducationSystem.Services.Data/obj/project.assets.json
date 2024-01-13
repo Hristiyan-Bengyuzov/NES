@@ -967,19 +967,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hristian\\.nuget\\packages\\": {}
+    "C:\\Users\\storm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj",
+      "projectUniqueName": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj",
       "projectName": "NeoEducationSystem.Services.Data",
-      "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj",
-      "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Services.Data\\obj\\",
+      "projectPath": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Services.Data\\NeoEducationSystem.Services.Data.csproj",
+      "packagesPath": "C:\\Users\\storm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Services.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\storm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -993,8 +993,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj"
+            "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj"
             }
           }
         }
@@ -1038,7 +1038,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
