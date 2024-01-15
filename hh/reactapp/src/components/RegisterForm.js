@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from'axios';
 import { API_URL } from '../common/GlobalConstants';
+
 const RegisterForm = () => {
     const formik = useFormik({
         initialValues: {
@@ -24,17 +25,16 @@ const RegisterForm = () => {
                 .required('Паролата е задължителна'),
         }),
         onSubmit: (values) => {
-           axios.post(API_URL + 'api/User/register', values)
+           axios.post(API_URL + '/api/User/register', values)
            .then(response => {
-            // Handle the response data here
             console.log('Response:', response.data);
           })
           .catch(error => {
-            // Handle errors here
             console.error('Error:', error.message);
           });
         },
     });
+
     return (
         <form onSubmit={formik.handleSubmit}>
             <div>

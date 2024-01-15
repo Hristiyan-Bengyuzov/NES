@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NeoEducationSystem.Web.DTOs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1905d934a6512237f23abb80d520b51481651e1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NeoEducationSystem.Web.DTOs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NeoEducationSystem.Web.DTOs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

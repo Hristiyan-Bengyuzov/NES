@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {}
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
+    "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
         "projectName": "NeoEducationSystem.Data.Models",
-        "projectPath": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
-        "packagesPath": "C:\\Users\\storm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Data.Models\\obj\\",
+        "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\NeoEducationSystem.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\storm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

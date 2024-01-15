@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\storm\\.nuget\\packages\\": {}
+    "C:\\Users\\Hristian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj",
+      "projectUniqueName": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj",
       "projectName": "NeoEducationSystem.Web.DTOs",
-      "projectPath": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj",
-      "packagesPath": "C:\\Users\\storm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\storm\\Documents\\GitHub\\NES\\hh\\NeoEducationSystem.Web.DTOs\\obj\\",
+      "projectPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\NeoEducationSystem.Web.DTOs.csproj",
+      "packagesPath": "C:\\Users\\Hristian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hristian\\Desktop\\NES\\hh\\NeoEducationSystem.Web.DTOs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\storm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
