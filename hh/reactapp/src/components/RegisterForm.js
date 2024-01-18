@@ -36,9 +36,11 @@ const RegisterForm = () => {
     });
 
     return (
+        <div className="backgroundLR">
+    <div className="log-in-container">
         <form onSubmit={formik.handleSubmit}>
             <div>
-                <label htmlFor="username">Име:</label>
+                <label htmlFor="username" className='LR-letters'>Име:</label>
                 <input
                     type="text"
                     id="username"
@@ -48,11 +50,11 @@ const RegisterForm = () => {
                     value={formik.values.username}
                 />
                 {formik.touched.username && formik.errors.username && (
-                    <div>{formik.errors.username}</div>
+                    <div className='ER-letters'>{formik.errors.username}</div>
                 )}
             </div>
             <div>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email" className='LR-letters'>Email:</label>
                 <input
                     type="text"
                     id="email"
@@ -62,11 +64,11 @@ const RegisterForm = () => {
                     value={formik.values.email}
                 />
                 {formik.touched.email && formik.errors.email && (
-                    <div>{formik.errors.email}</div>
+                    <div className='ER-letters'>{formik.errors.email}</div>
                 )}
             </div>
             <div>
-                <label htmlFor="password">Парола:</label>
+                <label htmlFor="password" className='LR-letters'>Парола:</label>
                 <input
                     type="password"
                     id="password"
@@ -76,13 +78,15 @@ const RegisterForm = () => {
                     value={formik.values.password}
                 />
                 {formik.touched.password && formik.errors.password && (
-                    <div>{formik.errors.password}</div>
+                    <div className='ER-letters'>{formik.errors.password}</div>
                 )}
             </div>
             <div>
                 <button type="submit">Регистрирай се</button>
             </div>
         </form>
+        </div>
+        </div>
     );
 };
 export default RegisterForm;

@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { API_URL } from '../common/GlobalConstants';
+import "../styles/LogInForm.css"
 
 const LogInForm = () => {
   const formik = useFormik({
@@ -37,10 +38,12 @@ const LogInForm = () => {
   });
 
   return (
+    <div className="backgroundLR">
+    <div className="log-in-container">
     <form onSubmit={formik.handleSubmit}>
       <div>
-        <label htmlFor="email">Email:</label>
-        <input
+        <label htmlFor="email" className='LR-letters'>Email:</label>
+        <input className="LR-input-field"
           type="text"
           id="email"
           name="email"
@@ -49,12 +52,12 @@ const LogInForm = () => {
           value={formik.values.email}
         />
         {formik.touched.email && formik.errors.email && (
-          <div>{formik.errors.email}</div>
+          <div className='ER-letters'>{formik.errors.email}</div>
         )}
       </div>
       <div>
-        <label htmlFor="password">Парола:</label>
-        <input
+        <label htmlFor="password" className='LR-letters' >Парола:</label>
+        <input className="LR-input-field"
           type="password"
           id="password"
           name="password"
@@ -63,13 +66,15 @@ const LogInForm = () => {
           value={formik.values.password}
         />
         {formik.touched.password && formik.errors.password && (
-          <div>{formik.errors.password}</div>
+          <div className='ER-letters'>{formik.errors.password}</div>
         )}
       </div>
       <div>
-        <button type="submit">Влезни</button>
+        <button type="submit" className = "LR-submit">Влезни</button>
       </div>
     </form>
+    </div>
+    </div>
   );
 };
 export default LogInForm;
