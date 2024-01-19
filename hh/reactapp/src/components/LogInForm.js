@@ -3,9 +3,12 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { API_URL } from '../common/GlobalConstants';
-import "../styles/LogInForm.css"
+import "../styles/LogInForm.css";
+import { useNavigate } from 'react-router-dom';
 
 const LogInForm = () => {
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -24,6 +27,8 @@ const LogInForm = () => {
       axios.post(API_URL + '/api/User/login', values)
         .then(response => {
           console.log('Response:', response.data);
+          localStorage.setItem('token', response.data.token);
+          navigate('/home');
         })
         .catch(error => {
           if (error.response && error.response.status === 401) {

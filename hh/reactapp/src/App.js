@@ -12,6 +12,11 @@ import SQLLessons from './pages/SQLLessons.js';
 import NoPage from './pages/NoPage.js';
 
 const App = () => {
+    // clears localstorage on launch
+    useEffect(() => {
+        localStorage.clear();
+      }, []);
+
     return (
         <>
         <BrowserRouter>
