@@ -4,8 +4,11 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { API_URL } from '../common/GlobalConstants';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
+    const navigate = useNavigate();
+
     const formik = useFormik({
         initialValues: {
             username: '',
@@ -38,6 +41,11 @@ const RegisterForm = () => {
                         iconColor: "#FF00FF",
                         confirmButtonColor: "#ee4542"
 
+                    })
+                    .then(result => {
+                        if (result.isConfirmed || result.isDismissed) {
+                            navigate('/login');
+                        }
                     });
                 })
                 .catch(error => {
