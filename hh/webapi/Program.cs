@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NeoEducationSystem.Data;
 using NeoEducationSystem.Data.Models;
+using NeoEducationSystem.Data.Seeders;
+using NeoEducationSystem.Services.Data.Courses;
 using NeoEducationSystem.Services.Data.Jwt;
 using System.Text;
 
@@ -38,6 +40,7 @@ builder.Services.AddAuthentication(options =>
 
 // Add services to the container.
 builder.Services.AddTransient<IJwtTokenProvider, JwtTokenProvider>();
+builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy",
@@ -53,6 +56,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+using (var serviceScope = app.Services.CreateScope())
+{
+    var dbContext = serviceScope.ServiceProvider.GetRequiredService<NeoEducationDbContext>();
+    await new CourseSeeder().SeedAsync(dbContext, serviceScope.ServiceProvider);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

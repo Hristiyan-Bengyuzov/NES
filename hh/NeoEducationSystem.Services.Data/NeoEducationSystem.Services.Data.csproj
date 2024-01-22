@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NeoEducationSystem.Data.Models\NeoEducationSystem.Data.Models.csproj" />
+    <ProjectReference Include="..\NeoEducationSystem.Data\NeoEducationSystem.Data.csproj" />
+    <ProjectReference Include="..\NeoEducationSystem.Web.DTOs\NeoEducationSystem.Web.DTOs.csproj" />
   </ItemGroup>
 
 </Project>
