@@ -16,7 +16,7 @@ const StartMenu = () => {
     <div className="big-container">
       <div className="container">
         <div className="start-menu">
-          <Link to="/lessonSections" className='start-buttons start' style={{ textDecoration: 'none' }}>СТАРТ</Link>
+          <Link to="/courses" className='start-buttons start' style={{ textDecoration: 'none' }}>СТАРТ</Link>
           <Link to="/options" className='start-buttons options' style={{ textDecoration: 'none' }}>Опции</Link>
           <Link to="/forums" className='start-buttons info' style={{ textDecoration: 'none' }}>Форуми</Link>
         </div>

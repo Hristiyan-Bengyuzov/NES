@@ -12,15 +12,21 @@ namespace NeoEducationSystem.Data.Seeders
             {
                 new Course
                 {
-                    Title = "Основни знания"
+                    Title = "Основни знания",
+                    ImagePath = "pbimage.jpg",
+                    Styles = "programmingBasics clickContainer"
                 },
                 new Course
                 {
-                    Title = "ООП"
+                    Title = "ООП",
+                    ImagePath = "oopimage.png",
+                    Styles = "oop clickContainer oopSQLClickContainer"
                 },
                 new Course
                 {
-                    Title = "SQL"
+                    Title = "SQL",
+                    ImagePath = "sqlimage.png",
+                    Styles = "sql clickContainer oopSQLClickContainer"
                 },
             });
 

@@ -12,4 +12,10 @@ public class Course
     public string Title { get; set; } = null!;
 
     public ICollection<Lesson> Lessons { get; set; } = new HashSet<Lesson>();
+
+    [MaxLength(50)]
+    public string? ImagePath { get; set; } 
+
+    [MaxLength(50)]
+    public string? Styles { get; set; } 
 }

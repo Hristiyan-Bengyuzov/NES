@@ -231,6 +231,14 @@ namespace NeoEducationSystem.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ImagePath")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Styles")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(30)
@@ -239,6 +247,23 @@ namespace NeoEducationSystem.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Title = "Основни знания"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Title = "ООП"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Title = "SQL"
+                        });
                 });
 
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Lesson", b =>
