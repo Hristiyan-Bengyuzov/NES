@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Loading from "./Loading";
 import { Link } from 'react-router-dom';
 import { API_URL } from "../common/GlobalConstants";
 import axios from "axios";
@@ -24,7 +25,7 @@ const CoursesMenu = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return (

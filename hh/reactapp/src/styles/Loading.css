@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/3997-font.otf') format('opentype');
+}
+
+body {
+    background-image: url('../images/site-background1.gif');
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p {
+    margin-top: 125px;
+    font-family: 'Pixel';
+    font-size: xx-large;
+    color: #3027e6;
+}
