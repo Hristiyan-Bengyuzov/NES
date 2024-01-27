@@ -10,6 +10,7 @@ import PBLessons from './pages/PBLessons.js';
 import OOPLessons from './pages/OOPLessons.js';
 import SQLLessons from './pages/SQLLessons.js';
 import NoPage from './pages/NoPage.js';
+import CoursePage from './pages/CoursePage.js';
 
 const App = () => {
     // clears localstorage on launch
@@ -25,6 +26,7 @@ const App = () => {
                     <Route path="/home" element={<Home />} />
                     <Route path="/forums" element={<Forums />} />
                     <Route path="/courses" element={<CoursesSection />} />
+                    <Route path="/course/:courseId" element={<CoursePage />}></Route>
                     <Route path="/options" element={<Options />} />
                     <Route path="/login" element={<LogIn />} />
                     <Route path="/register" element={<Register />} />
