@@ -14,8 +14,10 @@
 				new LessonSeeder(),
 			};
 
-			await Task.WhenAll(seeders.Select(x => x.SeedAsync(context, serviceProvider)));
+			foreach (var seeder in seeders)
+			{
+				await seeder.SeedAsync(context, serviceProvider);
+			}
 		}
 	}
 }
-
