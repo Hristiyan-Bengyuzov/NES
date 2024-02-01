@@ -1,0 +1,62 @@
+.lesson-title-container {
+    width: 1000px;
+    height: 60px;
+    background-color: rgb(16, 16, 16);
+    text-align: left;
+    font-family: 'Pixel';
+    font-size: 40px;
+    line-height: 25px;
+    border: 25px solid;
+    border-radius: 50px;
+    border-image: url(https://imgur.com/U7m9WXl.png) 33 round;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  
+  .lesson-title{
+    color: rgb(228, 228, 228);
+    /* center vertical */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+     /* center vertical */
+    padding-left: 10px;
+  }
+  .ld-container{
+    display: flex;
+    justify-content: left;
+    gap: 50px;
+  }
+  
+  .lesson-desc1{
+  display: flex;
+  height: 100px;
+  width: 500px;
+  flex-direction: row;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  align-items: center;
+  }
+  
+  .desc-arrow{
+   height: 50px;
+   color: rgb(37, 37, 37);
+   margin-right: -10px;
+  }
+  
+  .lesson-desc{
+   font-family: 'Pixel';
+   font-size: 15px;
+   color: rgb(228, 228, 228);
+   background-color: rgb(37, 37, 37);
+   height: 100px;
+   width: 500px;
+   border-radius: 10px;
+   text-align: center;
+  }
+  
+  .lesson-title-container:hover + .lesson-desc1{
+    opacity: 1;
+  }

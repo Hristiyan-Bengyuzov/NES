@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import { API_URL } from "../common/GlobalConstants";
 import axios from "axios";
 import Loading from "./Loading";
+import "../styles/Course.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faCaretLeft} from '@fortawesome/free-solid-svg-icons';
 
 const Course = () => {
   const { courseId } = useParams();
@@ -30,12 +33,21 @@ const Course = () => {
 
   return (
     <>
-      {lessons.map(lesson => (
-        <div key={lesson.id}>
-          <p>{lesson.title}</p>
-          <p>{lesson.description}</p>
-        </div>
-      ))}
+      <div className="class-container">
+        {lessons.map(lesson => (
+          <div className="ld-container">
+            <div className="lesson-title-container" key={lesson.id}>
+              <p className="lesson-title">{lesson.title}</p>
+            </div>
+            <div className="lesson-desc1">
+            <FontAwesomeIcon icon={faCaretLeft} className="desc-arrow" />
+            <div className="lesson-desc">
+              <p>{lesson.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
