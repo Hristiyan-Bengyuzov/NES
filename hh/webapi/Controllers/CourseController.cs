@@ -25,5 +25,24 @@ namespace webapi.Controllers
                 return StatusCode(500);
             }
         }
+
+        [HttpGet("getCourseTitle/{courseId}")]
+        public async Task<ActionResult<string>> GetCourseTitle(int courseId)
+        {
+            try
+            {
+                if (!await _courseService.CourseExistsById(courseId))
+                {
+                    return BadRequest("No such course!");
+                }
+
+                var title = await _courseService.GetCourseTitleById(courseId);
+                return Ok(title);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
     }
 }
