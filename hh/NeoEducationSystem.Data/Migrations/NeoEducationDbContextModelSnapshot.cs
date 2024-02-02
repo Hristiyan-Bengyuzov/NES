@@ -223,6 +223,34 @@ namespace NeoEducationSystem.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.CodeSnippet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50000)
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<int>("ParagraphId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParagraphId");
+
+                    b.ToTable("CodeSnippets");
+                });
+
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Course", b =>
                 {
                     b.Property<int>("Id")
@@ -247,23 +275,6 @@ namespace NeoEducationSystem.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Title = "Основни знания"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Title = "ООП"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Title = "SQL"
-                        });
                 });
 
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Lesson", b =>
@@ -301,9 +312,6 @@ namespace NeoEducationSystem.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -370,6 +378,17 @@ namespace NeoEducationSystem.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.CodeSnippet", b =>
+                {
+                    b.HasOne("NeoEducationSystem.Data.Models.Paragraph", "Paragraph")
+                        .WithMany("CodeSnippets")
+                        .HasForeignKey("ParagraphId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Paragraph");
+                });
+
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Lesson", b =>
                 {
                     b.HasOne("NeoEducationSystem.Data.Models.Course", "Course")
@@ -400,6 +419,11 @@ namespace NeoEducationSystem.Data.Migrations
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Lesson", b =>
                 {
                     b.Navigation("Paragraphs");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Paragraph", b =>
+                {
+                    b.Navigation("CodeSnippets");
                 });
 #pragma warning restore 612, 618
         }

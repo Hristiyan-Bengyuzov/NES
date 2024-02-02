@@ -11,8 +11,8 @@ public class Paragraph
     [Required]
     public string Content { get; set; } = null!;
 
-    public string? Code { get; set; }
-
+    public ICollection<CodeSnippet> CodeSnippets { get; set; } = new HashSet<CodeSnippet>();
+    
     [ForeignKey(nameof(Lesson))]
     public int LessonId { get; set; }
 
