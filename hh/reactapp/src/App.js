@@ -11,6 +11,7 @@ import OOPLessons from './pages/OOPLessons.js';
 import SQLLessons from './pages/SQLLessons.js';
 import NoPage from './pages/NoPage.js';
 import CoursePage from './pages/CoursePage.js';
+import LessonInfo from './components/LessonInfo.js';
 
 const App = () => {
     // clears localstorage on launch
@@ -33,6 +34,7 @@ const App = () => {
                     <Route path="/PBLessons" element={<PBLessons />} />
                     <Route path="/OOPLessons" element={<OOPLessons />} />
                     <Route path="/SQLLessons" element={<SQLLessons />} />
+                    <Route path="/test/:lessonId" element={<LessonInfo />} />
                     <Route path="*" element={<NoPage />} />
                 </Routes>
             </BrowserRouter>

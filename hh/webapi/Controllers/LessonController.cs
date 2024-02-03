@@ -25,5 +25,24 @@ namespace webapi.Controllers
 				return StatusCode(500);
 			}
 		}
+
+		[HttpGet("getLessonInfo/{lessonId}")]
+		public async Task<ActionResult<LessonInfoDTO>> GetLessonInformation(int lessonId)
+		{
+			try
+			{
+				if (!await _lessonService.LessonExistsById(lessonId))
+				{
+					return BadRequest("No such lesson!");
+				}
+
+				var lessonInfoDto = await _lessonService.GetLessonInformation(lessonId);
+				return Ok(lessonInfoDto);
+			}
+			catch (Exception)
+			{
+				return StatusCode(500);
+			}
+		}
 	}
 }

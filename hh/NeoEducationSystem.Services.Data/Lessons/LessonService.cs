@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NeoEducationSystem.Data;
+using NeoEducationSystem.Web.DTOs.CodeSnippets;
 using NeoEducationSystem.Web.DTOs.Lessons;
+using NeoEducationSystem.Web.DTOs.Paragraphs;
 
 namespace NeoEducationSystem.Services.Data.Lessons
 {
@@ -26,5 +28,33 @@ namespace NeoEducationSystem.Services.Data.Lessons
 
 			return lessonDTOs;
 		}
+
+		public async Task<LessonInfoDTO> GetLessonInformation(int lessonId)
+		{
+			var lessonInfoDTO = await _context.Lessons
+					.Where(l => l.Id == lessonId)
+					.Include(l => l.Paragraphs)
+						.ThenInclude(p => p.CodeSnippets)
+					.Select(l => new LessonInfoDTO
+					{
+						Title = l.Title,
+						Paragraphs = l.Paragraphs.Select(p => new ParagraphDTO
+						{
+							Id = p.Id,
+							Content = p.Content,
+							CodeSnippets = p.CodeSnippets.Select(cs => new CodeSnippetDTO
+							{
+								Id = cs.Id,
+								Language = cs.Language,
+								Code = cs.Code
+							})
+						})
+					})
+					.FirstAsync();
+
+			return lessonInfoDTO;
+		}
+
+		public async Task<bool> LessonExistsById(int lessonId) => await _context.Lessons.AnyAsync(l => l.Id == lessonId);
 	}
 }

@@ -12,6 +12,8 @@
 			{
 				new CourseSeeder(),
 				new LessonSeeder(),
+				new ParagraphSeeder(),
+				new CodeSnippetSeeder(),
 			};
 
 			foreach (var seeder in seeders)
