@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { API_URL } from "../common/GlobalConstants";
 import axios from "axios";
 import Loading from "./Loading";
@@ -47,9 +47,9 @@ const Course = () => {
         <h1 className="titlecard">{title}</h1>
         {lessons.map(lesson => (
           <div className="ld-container">
-            <div className="lesson-title-container" key={lesson.id}>
+            <Link to={`/lesson/${lesson.id}`} style={{ textDecoration: 'none' }} className="lesson-title-container" key={lesson.id}>
               <p className="lesson-title">{lesson.title}</p>
-            </div>
+            </Link>
             <div className="lesson-desc1">
               <FontAwesomeIcon icon={faCaretLeft} className="desc-arrow" />
               <div className="lesson-desc">

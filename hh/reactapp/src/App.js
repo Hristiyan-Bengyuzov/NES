@@ -34,7 +34,7 @@ const App = () => {
                     <Route path="/PBLessons" element={<PBLessons />} />
                     <Route path="/OOPLessons" element={<OOPLessons />} />
                     <Route path="/SQLLessons" element={<SQLLessons />} />
-                    <Route path="/test/:lessonId" element={<LessonInfo />} />
+                    <Route path="/lesson/:lessonId" element={<LessonInfo />} />
                     <Route path="*" element={<NoPage />} />
                 </Routes>
             </BrowserRouter>
