@@ -4,16 +4,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "./Loading";
 import CodeSnippet from "./CodeSnippet";
+import "../styles/LessonInfo.css";
 
 const LessonInfo = () => {
     const [lessonInfo, setLessonInfo] = useState({});
     const { lessonId } = useParams();
     const [loading, setLoading] = useState(true);
-    const [snippet, setSnippet] = useState('');
-
-    const handleSnippetChange = (snippet) => {
-        setSnippet(snippet);
-    }
 
     useEffect(() => {
         const fetchLessonInfo = async () => {
@@ -30,30 +26,43 @@ const LessonInfo = () => {
         fetchLessonInfo();
     }, []);
 
+    const logoMap = {
+        csharp: 'csharplogo.png',
+        java: 'javalogo.png'
+    };
+
     if (loading) {
         return <Loading />;
     }
 
     return (
         <>
-            <h1>{lessonInfo.title}</h1>
-            {lessonInfo.paragraphs.map(paragraph => {
-                return (
-                    <>
-                        <h1>{paragraph.content}</h1>
-                        {
-                            paragraph.codeSnippets.map(snippet => {
-                                return (
-                                    <li key={snippet.id}>
-                                        <button onClick={() => handleSnippetChange(snippet)}>{snippet.language}</button>
-                                    </li>
-                                )
-                            })
-                        }
-                        <CodeSnippet language={snippet.language} code={snippet.code} />
-                    </>
-                )
-            })}
+            <div className="titlecard">{lessonInfo.title}</div>
+            <div className="paragraphs-container">
+                {lessonInfo.paragraphs.map(paragraph => {
+                    return (
+                        <>
+                            <div className="lesson-paragraph">{paragraph.content}</div>
+                            {
+                                paragraph.codeSnippets.map(snippet => {
+                                    return (
+                                        <div className="snippets-container">
+                                            <div className="SNIPPET-container">
+                                                <div className="logo">
+                                                    <img src={require(`../images/${logoMap[snippet.language]}`)} alt="" className="logo" />
+                                                </div>
+                                                <div className="snippet" key={snippet.id}>
+                                                    <CodeSnippet language={snippet.language} code={snippet.code} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </>
+                    )
+                })}
+            </div>
         </>
     );
 }
