@@ -12,13 +12,15 @@ import SQLLessons from './pages/SQLLessons.js';
 import NoPage from './pages/NoPage.js';
 import CoursePage from './pages/CoursePage.js';
 import LessonInfo from './components/LessonInfo.js';
+import ThreadForm from './components/ThreadForm.js';
 
 const App = () => {
     // clears localstorage on launch
+    // i'm honestly scared of this now
     useEffect(() => {
         localStorage.clear();
     }, []);
-
+    
     return (
         <>
             <BrowserRouter>
@@ -35,6 +37,7 @@ const App = () => {
                     <Route path="/OOPLessons" element={<OOPLessons />} />
                     <Route path="/SQLLessons" element={<SQLLessons />} />
                     <Route path="/lesson/:lessonId" element={<LessonInfo />} />
+                    <Route path="/threadTest" element={<ThreadForm />} />
                     <Route path="*" element={<NoPage />} />
                 </Routes>
             </BrowserRouter>

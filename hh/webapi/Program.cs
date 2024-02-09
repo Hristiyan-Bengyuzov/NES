@@ -1,3 +1,4 @@
+using CloudinaryDotNet;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -6,8 +7,10 @@ using NeoEducationSystem.Data;
 using NeoEducationSystem.Data.Models;
 using NeoEducationSystem.Data.Seeders;
 using NeoEducationSystem.Services.Data.Courses;
+using NeoEducationSystem.Services.Data.Images;
 using NeoEducationSystem.Services.Data.Jwt;
 using NeoEducationSystem.Services.Data.Lessons;
+using NeoEducationSystem.Services.Data.Threads;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,39 +20,41 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
 builder.Services.AddDbContext<NeoEducationDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-	.AddEntityFrameworkStores<NeoEducationDbContext>()
-	.AddDefaultTokenProviders();
+    .AddEntityFrameworkStores<NeoEducationDbContext>()
+    .AddDefaultTokenProviders();
 
 // Add JWT authentication
 builder.Services.AddAuthentication(options =>
 {
-	options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-	options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
 .AddJwtBearer(options =>
 {
-	options.TokenValidationParameters = new TokenValidationParameters
-	{
-		ValidateIssuer = true,
-		ValidateAudience = true,
-		ValidateIssuerSigningKey = true,
-		ValidIssuer = builder.Configuration["JwtConfig:JwtIssuer"],
-		ValidAudience = builder.Configuration["JwtConfig:JwtIssuer"],
-		IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtConfig:JwtKey"]))
-	};
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["JwtConfig:JwtIssuer"],
+        ValidAudience = builder.Configuration["JwtConfig:JwtIssuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtConfig:JwtKey"]))
+    };
 });
 
 // Add services to the container.
 builder.Services.AddTransient<IJwtTokenProvider, JwtTokenProvider>();
 builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<ILessonService, LessonService>();
+builder.Services.AddTransient<IThreadService, ThreadService>();
+builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 builder.Services.AddCors(options =>
 {
-	options.AddPolicy("CorsPolicy",
-		builder => builder
-			.AllowAnyOrigin()
-			.AllowAnyMethod()
-			.AllowAnyHeader());
+    options.AddPolicy("CorsPolicy",
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 });
 
 builder.Services.AddControllers();
@@ -61,15 +66,15 @@ var app = builder.Build();
 
 using (var serviceScope = app.Services.CreateScope())
 {
-	var dbContext = serviceScope.ServiceProvider.GetRequiredService<NeoEducationDbContext>();
-	await new NESeeder().SeedAsync(dbContext, serviceScope.ServiceProvider);
+    var dbContext = serviceScope.ServiceProvider.GetRequiredService<NeoEducationDbContext>();
+    await new NESeeder().SeedAsync(dbContext, serviceScope.ServiceProvider);
 }
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseCors("CorsPolicy");

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using NeoEducationSystem.Data.Models;
+using Thread = NeoEducationSystem.Data.Models.Thread;
 
 namespace NeoEducationSystem.Data;
 
@@ -12,4 +13,5 @@ public class NeoEducationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Lesson> Lessons { get; set; }
     public DbSet<Paragraph> Paragraphs { get; set; }
     public DbSet<CodeSnippet> CodeSnippets { get; set; }
+    public DbSet<Thread> Threads { get; set; }
 }

@@ -327,6 +327,41 @@ namespace NeoEducationSystem.Data.Migrations
                     b.ToTable("Paragraphs");
                 });
 
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Thread", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Threads");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -411,6 +446,23 @@ namespace NeoEducationSystem.Data.Migrations
                     b.Navigation("Lesson");
                 });
 
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Thread", b =>
+                {
+                    b.HasOne("NeoEducationSystem.Data.Models.Thread", "Parent")
+                        .WithMany("Replies")
+                        .HasForeignKey("ParentId");
+
+                    b.HasOne("NeoEducationSystem.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Parent");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Course", b =>
                 {
                     b.Navigation("Lessons");
@@ -424,6 +476,11 @@ namespace NeoEducationSystem.Data.Migrations
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Paragraph", b =>
                 {
                     b.Navigation("CodeSnippets");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Thread", b =>
+                {
+                    b.Navigation("Replies");
                 });
 #pragma warning restore 612, 618
         }

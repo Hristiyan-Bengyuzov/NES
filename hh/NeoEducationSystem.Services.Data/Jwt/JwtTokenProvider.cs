@@ -21,11 +21,11 @@ public class JwtTokenProvider : IJwtTokenProvider
         // add roles later on
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.NameIdentifier, user.Id),
-            new Claim(ClaimTypes.Name, user.UserName),
+            new Claim("userId", user.Id),
+            new Claim("email", user.UserName),
         };
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtConfig:JwtKey"])); 
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtConfig:JwtKey"]));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         var expires = DateTime.Now.AddDays(double.Parse(_configuration["JwtConfig:JwtExpireDays"]));
 
