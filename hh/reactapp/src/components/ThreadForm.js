@@ -38,16 +38,11 @@ const ThreadForm = () => {
         onSubmit: (values) => {
             const userId = getUserIdFromJwtPayload(getToken());
 
-            console.log(new Date().toISOString());
             const formData = new FormData();
             formData.append('content', values.content);
             formData.append('image', values.image);
             formData.append('createdOn', values.createdOn);
             formData.append('userId', userId);
-
-            // for (var pair of formData.entries()) {
-            //     console.log(pair[0] + ', ' + pair[1]);
-            // }
 
             axios.post(API_URL + '/api/Thread/postThread', formData, {
                 headers: {

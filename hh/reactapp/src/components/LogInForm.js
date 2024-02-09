@@ -27,7 +27,7 @@ const LogInForm = () => {
       axios.post(API_URL + '/api/User/login', values)
         .then(response => {
           console.log('Response:', response.data);
-          localStorage.setItem('token', response.data.token);
+          sessionStorage.setItem('token', response.data.token);
           navigate('/home');
         })
         .catch(error => {

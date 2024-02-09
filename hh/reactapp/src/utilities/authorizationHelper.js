@@ -3,5 +3,5 @@ export function getAuthorizationHeader() {
 }
 
 export function getToken() {
-    return localStorage.getItem('token');
+    return sessionStorage.getItem('token');
 }

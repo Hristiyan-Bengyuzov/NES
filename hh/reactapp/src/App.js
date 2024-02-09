@@ -15,11 +15,6 @@ import LessonInfo from './components/LessonInfo.js';
 import ThreadForm from './components/ThreadForm.js';
 
 const App = () => {
-    // clears localstorage on launch
-    // i'm honestly scared of this now
-    useEffect(() => {
-        localStorage.clear();
-    }, []);
     
     return (
         <>
