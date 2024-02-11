@@ -18,9 +18,13 @@ namespace NeoEducationSystem.Data.Models
 		public string Code { get; set; } = null!;
 
 		[ForeignKey(nameof(Paragraph))]
-		public int ParagraphId { get; set; }
+		public int? ParagraphId { get; set; }
 
-		[Required]
-		public virtual Paragraph Paragraph { get; set; } = null!;
+		public virtual Paragraph? Paragraph { get; set; } = null!;
+
+		[ForeignKey(nameof(Question))]
+		public int? QuestionId { get; set; }
+
+		public virtual Question? Question { get; set; }
 	}
 }

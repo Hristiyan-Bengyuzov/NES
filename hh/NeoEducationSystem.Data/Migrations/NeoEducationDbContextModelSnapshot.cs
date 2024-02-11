@@ -155,6 +155,31 @@ namespace NeoEducationSystem.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Answer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("Answers");
+                });
+
             modelBuilder.Entity("NeoEducationSystem.Data.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -241,12 +266,17 @@ namespace NeoEducationSystem.Data.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<int>("ParagraphId")
+                    b.Property<int?>("ParagraphId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("QuestionId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ParagraphId");
+
+                    b.HasIndex("QuestionId");
 
                     b.ToTable("CodeSnippets");
                 });
@@ -325,6 +355,63 @@ namespace NeoEducationSystem.Data.Migrations
                     b.HasIndex("LessonId");
 
                     b.ToTable("Paragraphs");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Question", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TestId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TestId");
+
+                    b.ToTable("Questions");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Test", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tests");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.TestResult", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("TestId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Points")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "TestId");
+
+                    b.HasIndex("TestId");
+
+                    b.ToTable("TestResults");
                 });
 
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Thread", b =>
@@ -413,15 +500,30 @@ namespace NeoEducationSystem.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Answer", b =>
+                {
+                    b.HasOne("NeoEducationSystem.Data.Models.Question", "Question")
+                        .WithMany("Answers")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Question");
+                });
+
             modelBuilder.Entity("NeoEducationSystem.Data.Models.CodeSnippet", b =>
                 {
                     b.HasOne("NeoEducationSystem.Data.Models.Paragraph", "Paragraph")
                         .WithMany("CodeSnippets")
-                        .HasForeignKey("ParagraphId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ParagraphId");
+
+                    b.HasOne("NeoEducationSystem.Data.Models.Question", "Question")
+                        .WithMany("Codes")
+                        .HasForeignKey("QuestionId");
 
                     b.Navigation("Paragraph");
+
+                    b.Navigation("Question");
                 });
 
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Lesson", b =>
@@ -444,6 +546,36 @@ namespace NeoEducationSystem.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Lesson");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Question", b =>
+                {
+                    b.HasOne("NeoEducationSystem.Data.Models.Test", "Test")
+                        .WithMany("Questions")
+                        .HasForeignKey("TestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Test");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.TestResult", b =>
+                {
+                    b.HasOne("NeoEducationSystem.Data.Models.Test", "Test")
+                        .WithMany()
+                        .HasForeignKey("TestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NeoEducationSystem.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Test");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Thread", b =>
@@ -476,6 +608,18 @@ namespace NeoEducationSystem.Data.Migrations
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Paragraph", b =>
                 {
                     b.Navigation("CodeSnippets");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Question", b =>
+                {
+                    b.Navigation("Answers");
+
+                    b.Navigation("Codes");
+                });
+
+            modelBuilder.Entity("NeoEducationSystem.Data.Models.Test", b =>
+                {
+                    b.Navigation("Questions");
                 });
 
             modelBuilder.Entity("NeoEducationSystem.Data.Models.Thread", b =>
