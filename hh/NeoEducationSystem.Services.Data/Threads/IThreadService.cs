@@ -5,5 +5,6 @@ namespace NeoEducationSystem.Services.Data.Threads
     public interface IThreadService
     {
         Task CreateThreadAsync(CreateThreadDTO threadDTO);
+        Task<IEnumerable<MainThreadDTO>> GetMainThreadsAsync();
     }
 }

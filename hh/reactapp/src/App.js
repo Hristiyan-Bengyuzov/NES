@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.js';
-import Forums from './pages/Forums.js';
 import CoursesSection from './pages/CoursesSection.js';
 import Options from './pages/Options.js';
 import LogIn from './pages/LogIn.js';
@@ -13,16 +12,17 @@ import NoPage from './pages/NoPage.js';
 import CoursePage from './pages/CoursePage.js';
 import LessonInfo from './components/LessonInfo.js';
 import ThreadForm from './components/ThreadForm.js';
+import ForumsPage from './pages/ForumsPage.js';
 
 const App = () => {
-    
+
     return (
         <>
             <BrowserRouter>
                 <Routes>
                     <Route index element={<Home />} />
                     <Route path="/home" element={<Home />} />
-                    <Route path="/forums" element={<Forums />} />
+                    <Route path="/forums" element={<ForumsPage />} />
                     <Route path="/courses" element={<CoursesSection />} />
                     <Route path="/course/:courseId" element={<CoursePage />}></Route>
                     <Route path="/options" element={<Options />} />
