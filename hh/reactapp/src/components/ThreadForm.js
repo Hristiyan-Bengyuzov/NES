@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { API_URL } from '../common/GlobalConstants';
 import { getToken } from '../utilities/authorizationHelper';
+import { useState } from 'react';
 
 const ThreadForm = () => {
 
@@ -14,6 +15,11 @@ const ThreadForm = () => {
         return jsonPayload.userId; // Return the userId from the parsed JSON
     }
 
+    const [opacity, setOpacity] = useState(0);
+
+    const showPost = () => {
+        setOpacity(opacity === 0 ? 1 : 0);
+    }
 
     const formik = useFormik({
         initialValues: {
@@ -59,25 +65,27 @@ const ThreadForm = () => {
     });
 
     return (
-        <div className="backgroundLR">
-            <div className="log-in-container">
+        <div className='thread-container'>
+            <div className="post-button" onClick={showPost}>[Попитай нещо]</div>
+            <div className="post-container" style={{ opacity: opacity }}>
                 <form onSubmit={formik.handleSubmit}>
-                    <div>
-                        <label htmlFor="content" className='LR-letters'>Content:</label>
-                        <input className="LR-input-field"
+                    <div className='post-content-container'>
+                        <label htmlFor="content" className='post-letters'>Въпрос:</label>
+                        <textarea className="post-input-field"
                             type="text"
                             id="content"
                             name="content"
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.content}
+                            rows={8}
                         />
                         {formik.touched.content && formik.errors.content && (
-                            <div className='ER-letters'>{formik.errors.content}</div>
+                            <div className='post-ER-letters'>{formik.errors.content}</div>
                         )}
                     </div>
                     <div>
-                        <label htmlFor="image" className='LR-letters'>Изображение:</label>
+                        <label htmlFor="image" className='post-letters'>Изображение:</label>
                         <input
                             type="file"
                             id="image"
@@ -87,11 +95,11 @@ const ThreadForm = () => {
                             }}
                         />
                         {formik.errors.image && (
-                            <div className='ER-letters'>{formik.errors.image}</div>
+                            <div className='post-ER-letters'>{formik.errors.image}</div>
                         )}
                     </div>
                     <div>
-                        <button type="submit" className="LR-submit">Post</button>
+                        <button type="submit" className="publish">Качи</button>
                     </div>
                 </form>
             </div>

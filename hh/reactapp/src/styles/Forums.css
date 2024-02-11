@@ -1,0 +1,130 @@
+.thread-container{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: right;
+  gap:500px;
+}
+
+.name-date-container{
+  display: flex;
+  flex-direction: row;
+  gap:50px;
+  font-family: "Pixel";
+  color: rgb(228, 228, 228);
+}
+
+.image-content-reply-container{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  gap:50px;
+  min-height: 100px;
+}
+
+.content-reply-container{
+  font-family: "Pixel";
+  color: rgb(228, 228, 228);
+}
+
+.OP-container{
+  background-color: rgb(16, 16, 16);
+  line-height: 5px;
+  font-family: 'Pixel';
+  border: 20px solid;
+  border-radius: 50px;
+  border-image: url(https://imgur.com/fNkgIXl.png) 33 round;
+  max-width: 600px;
+  padding: 5px;
+  gap:20px;
+}
+
+.OP-container:hover{
+  cursor: pointer;
+}
+
+.post-container{
+  margin-right: 15px;
+  margin-top: 15px;
+  width: 350px;
+  background-color: rgb(16, 16, 16);
+  line-height: 5px;
+  text-align: center;
+  font-family: 'Pixel';
+  font-size: 40px;
+  line-height: 25px;
+  border: 20px solid;
+  border-radius: 50px;
+  gap:20px;
+  border-image: url(https://imgur.com/fNkgIXl.png) 33 round;
+  opacity: 0;
+}
+
+.post-content-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.post-letters{
+  color: rgb(228, 228, 228);
+  font-size: 20px;
+}
+
+.post-ER-letters{
+  color: crimson;
+  font-size: 20px;
+}
+
+.post-input-field{
+  background-color: rgb(27 27 27 );
+  color: rgb(228, 228, 228);
+  font-family: "Arial";
+}
+
+.publish{
+  font-family: "Pixel";
+  color:deepskyblue;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0);
+}
+
+.publish:hover{
+  cursor: pointer;
+}
+
+.forum-username{
+  color:deepskyblue;
+}
+
+.forum-thread-id{
+  color:crimson;
+}
+
+.forum-replies{
+  color: gold;
+}
+
+.forum-background{
+  background-image: url('../images/forumbg.gif');
+  height: 100vh;
+}
+
+.container-forums{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap:15px;
+}
+
+.post-button{
+  border: none;
+  font-family: "Pixel";
+  font-size: 25px;
+  color:crimson;
+}
+
+.post-button:hover{
+  cursor: pointer;
+}
