@@ -5,7 +5,7 @@ import { API_URL } from '../common/GlobalConstants';
 import { getToken } from '../utilities/authorizationHelper';
 import { useState } from 'react';
 
-const ThreadForm = () => {
+const ThreadForm = ({ parentId = '' }) => {
 
     function getUserIdFromJwtPayload(jwt) {
         const base64Url = jwt.split('.')[1]; // Get the second part of the JWT
@@ -49,6 +49,11 @@ const ThreadForm = () => {
             formData.append('image', values.image);
             formData.append('createdOn', values.createdOn);
             formData.append('userId', userId);
+            formData.append('parentId', parentId);
+
+            for (const pair of formData.entries()) {
+                console.log(`${pair[0]}    ${pair[1]}`);
+            }
 
             axios.post(API_URL + '/api/Thread/postThread', formData, {
                 headers: {

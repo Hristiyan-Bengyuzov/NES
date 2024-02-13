@@ -10,6 +10,8 @@ namespace NeoEducationSystem.Web.DTOs.Threads
 
         public string UserId { get; set; }
 
+        public int? ParentId { get; set; }
+
         public DateTime CreatedOn { get; set; }
     }
 }

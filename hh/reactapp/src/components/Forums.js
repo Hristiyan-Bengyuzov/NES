@@ -31,7 +31,12 @@ const Forums = () => {
   return (
     <div className="container-forums">
       {threads.map(thread => (
-        <div className="OP-container">
+        <Link
+          className="OP-container"
+          to={`/thread/${thread.id}`}
+          style={{ textDecoration: 'none' }}
+          key={thread.id}
+        >
           <div className="name-date-container">
             <p className="forum-username">{thread.username}</p>
             <p>{thread.createdOn}</p>
@@ -44,14 +49,7 @@ const Forums = () => {
               <p className="forum-replies">Отговори: {thread.replyCount}</p>
             </div>
           </div>
-          <Link
-            to={`/forum/${thread.id}`}
-            className={`${thread.styles}`}
-            style={{ textDecoration: 'none' }}
-            key={thread.id}
-          >
-          </Link>
-        </div>
+        </Link>
       ))}
     </div>
   );

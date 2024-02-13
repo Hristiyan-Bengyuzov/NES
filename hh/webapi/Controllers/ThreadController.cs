@@ -43,5 +43,19 @@ namespace webapi.Controllers
 				return StatusCode(500);
 			}
 		}
+
+		[HttpGet("getThreadInfo/{threadId}")]
+		public async Task<ActionResult<ThreadInfoDTO>> GetThreadInfo(int threadId)
+		{
+            try
+            {
+                var threadInfo = await _threadService.GetThreadInfoAsync(threadId);
+                return Ok(threadInfo);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
 	}
 }

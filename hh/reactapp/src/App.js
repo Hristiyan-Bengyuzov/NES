@@ -13,6 +13,7 @@ import CoursePage from './pages/CoursePage.js';
 import LessonInfo from './components/LessonInfo.js';
 import ThreadForm from './components/ThreadForm.js';
 import ForumsPage from './pages/ForumsPage.js';
+import Thread from './components/Thread.js';
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
                     <Route path="/SQLLessons" element={<SQLLessons />} />
                     <Route path="/lesson/:lessonId" element={<LessonInfo />} />
                     <Route path="/threadTest" element={<ThreadForm />} />
+                    <Route path="/thread/:threadId" element={<Thread />} />
                     <Route path="*" element={<NoPage />} />
                 </Routes>
             </BrowserRouter>
