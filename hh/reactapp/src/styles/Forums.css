@@ -70,6 +70,9 @@
 .post-letters{
   color: rgb(228, 228, 228);
   font-size: 20px;
+  max-width: 400px;
+  word-wrap: break-word;
+  line-height: 1.5;
 }
 
 .post-ER-letters{
@@ -108,7 +111,8 @@
 
 .forum-background{
   background-image: url('../images/forumbg.gif');
-  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .container-forums{

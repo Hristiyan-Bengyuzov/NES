@@ -5,7 +5,7 @@ import { API_URL } from '../common/GlobalConstants';
 import { getToken } from '../utilities/authorizationHelper';
 import { useState } from 'react';
 
-const ThreadForm = ({ parentId = '' }) => {
+const ThreadForm = ({ parentId = '', buttonShow = true }) => {
 
     function getUserIdFromJwtPayload(jwt) {
         const base64Url = jwt.split('.')[1]; // Get the second part of the JWT
@@ -15,7 +15,7 @@ const ThreadForm = ({ parentId = '' }) => {
         return jsonPayload.userId; // Return the userId from the parsed JSON
     }
 
-    const [opacity, setOpacity] = useState(0);
+    const [opacity, setOpacity] = useState(buttonShow ? 0 : 1);
 
     const showPost = () => {
         setOpacity(opacity === 0 ? 1 : 0);
@@ -71,11 +71,13 @@ const ThreadForm = ({ parentId = '' }) => {
 
     return (
         <div className='thread-container'>
-            <div className="post-button" onClick={showPost}>[Попитай нещо]</div>
+            {buttonShow && (
+                <div className="post-button" onClick={showPost}>[Попитай нещо]</div>
+            )}
             <div className="post-container" style={{ opacity: opacity }}>
                 <form onSubmit={formik.handleSubmit}>
                     <div className='post-content-container'>
-                        <label htmlFor="content" className='post-letters'>Въпрос:</label>
+                        <label htmlFor="content" className='post-letters'>Съдържание:</label>
                         <textarea className="post-input-field"
                             type="text"
                             id="content"

@@ -1,0 +1,88 @@
+.entire-thread-container{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.OP-container-in-thread{
+  background-color: rgb(16, 16, 16);
+  line-height: 5px;
+  font-family: 'Pixel';
+  border: 20px solid;
+  border-radius: 50px;
+  border-image: url(https://imgur.com/fNkgIXl.png) 33 round;
+  width: 1000px;
+  padding: 9px;
+  gap:20px;
+}
+
+.name-date-container-in-thread{
+  display: flex;
+  flex-direction: row;
+  gap:50px;
+  font-family: "Pixel";
+  font-size: 27px;
+  color: rgb(228, 228, 228);
+}
+
+.image-content-reply-container-in-thread{
+  display: flex;
+  flex-direction: row;
+  height: 166px;
+  gap:50px;
+  min-height: 166px;
+}
+
+.content-reply-container-in-thread{
+  font-family: "Arial";
+  font-size: 27px;
+  color: rgb(228, 228, 228);
+  max-width: 800px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.OP-container1{
+  background-color: rgb(16, 16, 16);
+  line-height: 5px;
+  font-family: 'Pixel';
+  border: 20px solid;
+  border-radius: 50px;
+  border-image: url(https://imgur.com/fNkgIXl.png) 33 round;
+  max-width: 600px;
+  min-height: 187px;
+  padding: 5px;
+  gap:20px;
+}
+
+.content-reply-container2{
+  font-family: "Arial";
+  color: rgb(228, 228, 228);
+  max-width: 400px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.replies{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.GIANT-THREAD-CONTAINER{
+  display: flex;
+  flex-direction: row;
+  background-attachment: fixed;
+  background-size: cover;
+  gap:330px;
+}
+
+.poopandfart{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}

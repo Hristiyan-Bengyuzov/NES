@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Pixel';
+  src: url('../fonts/3997-font.otf') format('opentype');
+}
+
+.background {
+  background-image: url('../images/site-background1.gif');
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.LMcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.clickContainer {
+  width: 370px;
+  height: 400px;
+  background-color: rgb(16, 16, 16);
+  text-align: center;
+  font-family: 'Pixel';
+  font-size: 40px;
+  border: 33px solid;
+  border-radius: 50px;
+  border-image: url(https://imgur.com/U7m9WXl.png) 33 round;
+  color: rgb(228, 228, 228);
+}
+
+.CCimage {
+  height: 220px;
+  width: 350px;
+  border-radius: 7px;
+}
+
+.oopSQLClickContainer {
+  font-size: 80px;
+  line-height: 30px;
+}
