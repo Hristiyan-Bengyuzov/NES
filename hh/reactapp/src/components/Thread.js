@@ -11,19 +11,23 @@ const Thread = () => {
     const [threadInfo, setThreadInfo] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const fetchThreadInfo = async () => {
-            try {
-                const response = await axios.get(API_URL + `/api/Thread/getThreadInfo/${threadId}`);
-                console.log(response.data);
-                setThreadInfo(response.data);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching threads:', error);
-                setLoading(false);
-            }
-        };
+    const fetchThreadInfo = async () => {
+        try {
+            const response = await axios.get(API_URL + `/api/Thread/getThreadInfo/${threadId}`);
+            console.log(response.data);
+            setThreadInfo(response.data);
+            setLoading(false);
+        } catch (error) {
+            console.error('Error fetching threads:', error);
+            setLoading(false);
+        }
+    };
 
+    const handleReply = () => {
+       fetchThreadInfo();
+    };
+
+    useEffect(() => {
         fetchThreadInfo();
     }, []);
 
@@ -68,7 +72,7 @@ const Thread = () => {
                     </div>
                 </div>
                 <div className="poopandfart">
-                    <ThreadForm parentId={threadId} buttonShow={false} />
+                    <ThreadForm parentId={threadId} buttonShow={false} onReply={handleReply} />
                 </div>
             </div>
         </>

@@ -5,7 +5,7 @@ import { API_URL } from '../common/GlobalConstants';
 import { getToken } from '../utilities/authorizationHelper';
 import { useState } from 'react';
 
-const ThreadForm = ({ parentId = '', buttonShow = true }) => {
+const ThreadForm = ({ parentId = '', buttonShow = true, onReply }) => {
 
     function getUserIdFromJwtPayload(jwt) {
         const base64Url = jwt.split('.')[1]; // Get the second part of the JWT
@@ -51,6 +51,7 @@ const ThreadForm = ({ parentId = '', buttonShow = true }) => {
             formData.append('userId', userId);
             formData.append('parentId', parentId);
 
+            
             for (const pair of formData.entries()) {
                 console.log(`${pair[0]}    ${pair[1]}`);
             }
@@ -60,11 +61,13 @@ const ThreadForm = ({ parentId = '', buttonShow = true }) => {
                     'Content-Type': 'multipart/form-data',
                 },
             })
-                .then(response => {
-                    console.log('Response:', response.data);
-                })
-                .catch(error => {
-                    console.log(error);
+            .then(response => {
+                // callback function to update shit on the page
+                onReply();
+                console.log('Response:', response.data);
+            })
+            .catch(error => {
+                console.log(error);
                 });
         },
     });
