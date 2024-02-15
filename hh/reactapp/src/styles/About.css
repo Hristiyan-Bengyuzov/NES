@@ -1,0 +1,44 @@
+.about-container{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap:30px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.info-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
+  height: 700px;
+  background-color: rgb(16, 16, 16);
+  font-family: 'Pixel';
+  font-size: 30px;
+  color: rgb(228, 228, 228);
+  line-height: 25px;
+  border: 33px solid;
+  border-radius: 50px;
+  border-image: url(https://imgur.com/U7m9WXl.png) 33 round;
+  padding: 10px;
+}
+
+.info-img{
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid rgb(46, 176, 228);
+}
+
+.about-text{
+  line-height: 80px;
+}
+
+.git-logo{
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+}

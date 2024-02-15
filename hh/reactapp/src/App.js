@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.js';
 import CoursesSection from './pages/CoursesSection.js';
-import Options from './pages/Options.js';
+import About from './pages/About.js';
 import LogIn from './pages/LogIn.js';
 import Register from './pages/Register.js';
 import PBLessons from './pages/PBLessons.js';
@@ -27,7 +27,7 @@ const App = () => {
                     <Route path="/forums" element={<ForumsPage />} />
                     <Route path="/courses" element={<CoursesSection />} />
                     <Route path="/course/:courseId" element={<CoursePage />}></Route>
-                    <Route path="/options" element={<Options />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/login" element={<LogIn />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/PBLessons" element={<PBLessons />} />
