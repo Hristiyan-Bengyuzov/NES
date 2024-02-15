@@ -44,5 +44,19 @@ namespace webapi.Controllers
 				return StatusCode(500);
 			}
 		}
+
+		[HttpPost("addLesson")]
+		public async Task<IActionResult> AddLesson(CreateLessonDTO lessonDTO)
+		{
+			try
+			{
+				await _lessonService.CreateLessonAsync(lessonDTO);
+				return Ok("Successfully added lesson.");
+			}
+			catch (Exception)
+			{
+				return StatusCode(500);
+			}
+		}
 	}
 }

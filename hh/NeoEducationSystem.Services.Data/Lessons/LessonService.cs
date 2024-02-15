@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NeoEducationSystem.Data;
+using NeoEducationSystem.Data.Models;
 using NeoEducationSystem.Web.DTOs.CodeSnippets;
 using NeoEducationSystem.Web.DTOs.Lessons;
 using NeoEducationSystem.Web.DTOs.Paragraphs;
@@ -11,6 +12,18 @@ namespace NeoEducationSystem.Services.Data.Lessons
 		private readonly NeoEducationDbContext _context;
 
 		public LessonService(NeoEducationDbContext context) => _context = context;
+
+		public async Task CreateLessonAsync(CreateLessonDTO lessonDTO)
+		{
+			await _context.Lessons.AddAsync(new Lesson
+			{
+				CourseId = lessonDTO.CourseId,
+				Title = lessonDTO.Title,
+				Description = lessonDTO.Description,
+			});
+
+			await _context.SaveChangesAsync();
+		}
 
 		public async Task<IEnumerable<LessonDTO>> GetCourseLessons(int courseId)
 		{

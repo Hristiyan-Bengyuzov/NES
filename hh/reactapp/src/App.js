@@ -15,6 +15,7 @@ import ThreadForm from './components/ThreadForm.js';
 import ForumsPage from './pages/ForumsPage.js';
 import Thread from './components/Thread.js';
 import ThreadPage from './pages/ThreadPage.js';
+import AdminMenu from './components/AdminMenu.js';
 
 const App = () => {
 
@@ -36,6 +37,7 @@ const App = () => {
                     <Route path="/lesson/:lessonId" element={<LessonInfo />} />
                     <Route path="/threadTest" element={<ThreadForm />} />
                     <Route path="/thread/:threadId" element={<ThreadPage/>} />
+                    <Route path="/admin" element={<AdminMenu/>} />
                     <Route path="*" element={<NoPage />} />
                 </Routes>
             </BrowserRouter>
