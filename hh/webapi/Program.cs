@@ -10,6 +10,7 @@ using NeoEducationSystem.Services.Data.Courses;
 using NeoEducationSystem.Services.Data.Images;
 using NeoEducationSystem.Services.Data.Jwt;
 using NeoEducationSystem.Services.Data.Lessons;
+using NeoEducationSystem.Services.Data.Paragraphs;
 using NeoEducationSystem.Services.Data.Tests;
 using NeoEducationSystem.Services.Data.Threads;
 using System.Text;
@@ -49,6 +50,7 @@ builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<ILessonService, LessonService>();
 builder.Services.AddTransient<IThreadService, ThreadService>();
 builder.Services.AddTransient<ITestService, TestService>();
+builder.Services.AddTransient<IParagraphService, ParagraphService>();
 builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 builder.Services.AddCors(options =>
 {

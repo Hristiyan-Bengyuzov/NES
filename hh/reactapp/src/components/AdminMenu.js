@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/AdminMenu.css';
 import { MenuFoldOutlined, MenuUnfoldOutlined, UploadOutlined, UserOutlined, BookOutlined, } from '@ant-design/icons';
-import { Layout, Menu, Button, Modal, Form, Input, Select, theme } from 'antd';
+import { Layout, Menu, Button, Modal, Form, Input, Select, Table, theme } from 'antd';
 import { API_URL } from '../common/GlobalConstants';
 import axios from 'axios';
 
@@ -24,6 +24,47 @@ const AdminMenu = () => {
         paragraph: false,
         codeSnippet: false,
     });
+    const [lessons, setLessons] = useState([]);
+    const [currentLesson, setCurrentLesson] = useState({});
+
+    const handleCourseChange = (value) => {
+        fetchLessons(value);
+    };
+
+    const getCourseTitleById = (id) => {
+        const course = courses.find(course => course.id === id);
+        return course ? course.title : '';
+    };
+
+    const [lessonParagraphs, setLessonParagraphs] = useState([]);
+
+    const handleParagraphChange = (index, value) => {
+        const updatedParagraphs = [...lessonParagraphs];
+        updatedParagraphs[index] = value;
+        setLessonParagraphs(updatedParagraphs);
+    };
+
+    const addParagraph = () => {
+        setLessonParagraphs([...lessonParagraphs, '']);
+    };
+
+    const postParagraphs = () => {
+        const data = {
+            lessonId: currentLesson.id,
+            paragraphs: lessonParagraphs,
+        };
+
+        axios.post(API_URL + '/api/Paragraph/createParagraphs', data)
+            .then(reponse => console.log(reponse.data));
+
+        toggleModalVisibility('paragraph');
+    };
+
+    const removeParagraph = (index) => {
+        const updatedParagraphs = [...lessonParagraphs];
+        updatedParagraphs.splice(index, 1);
+        setLessonParagraphs(updatedParagraphs);
+    };
 
     const toggleModalVisibility = (key) => {
         setModalVisibilities((prevState) => ({
@@ -43,6 +84,15 @@ const AdminMenu = () => {
             });
 
         toggleModalVisibility('lesson');
+    };
+
+    const fetchLessons = async (courseId) => {
+        try {
+            const response = await axios.get(API_URL + `/api/Lesson/getCourseLessons/${courseId}`);
+            setLessons(response.data);
+        } catch (error) {
+            console.error('Error fetching lessons:', error);
+        }
     };
 
     return (
@@ -148,7 +198,73 @@ const AdminMenu = () => {
                         borderRadius: borderRadiusLG,
                     }}
                 >
-                    Content
+                    {selectedNav === '1' && (
+                        <div>Потребители</div>
+                    )}
+                    {selectedNav === '2' && (
+                        <>
+                            <h2>Уроци:</h2>
+                            <Select
+                                placeholder="Избери курс"
+                                style={{ width: 200, marginBottom: 16 }}
+                                onChange={handleCourseChange}
+                            >
+                                {courses.map((course) => (
+                                    <Select.Option key={course.id} value={course.id}>
+                                        {course.title}
+                                    </Select.Option>
+                                ))}
+                            </Select>
+                            <Table
+                                dataSource={lessons}
+                                columns={[
+                                    { title: 'ID', dataIndex: 'id', key: 'id' },
+                                    { title: 'Заглавие', dataIndex: 'title', key: 'title' },
+                                    { title: 'Описание', dataIndex: 'description', key: 'description' },
+                                    {
+                                        title: 'Действия',
+                                        key: 'actions',
+                                        render: (text, record) => (
+                                            <Button onClick={() => {
+                                                setCurrentLesson(record);
+                                                toggleModalVisibility('paragraph');
+                                            }}>
+                                                Добави параграфи
+                                            </Button>
+                                        ),
+                                    },
+                                ]}
+                            />
+                            <Modal
+                                title={`Добавяне на параграфи за урок ${currentLesson.title}`}
+                                open={modalVisibilities.paragraph}
+                                onCancel={() => toggleModalVisibility('paragraph')}
+                                footer={null}
+                            >
+                                {lessonParagraphs.map((paragraph, index) => (
+                                    <div key={index} style={{ marginBottom: '10px' }}>
+                                        <Input.TextArea
+                                            rows={3}
+                                            placeholder="Добави параграф..."
+                                            value={paragraph}
+                                            onChange={(e) => handleParagraphChange(index, e.target.value)}
+                                        />
+                                        <Button style={{ marginTop: '5px' }} onClick={() => removeParagraph(index)}>
+                                            Махни параграф
+                                        </Button>
+                                    </div>
+                                ))}
+
+                                <Button style={{ marginTop: '10px' }} onClick={addParagraph}>
+                                    Добави параграф
+                                </Button>
+
+                                <div style={{ marginTop: '10px' }}>
+                                    <Button type='primary' onClick={postParagraphs}>Качи</Button>
+                                </div>
+                            </Modal>
+                        </>
+                    )}
                 </Content>
             </Layout>
         </Layout>
