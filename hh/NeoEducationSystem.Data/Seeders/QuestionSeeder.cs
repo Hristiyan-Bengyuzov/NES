@@ -41,6 +41,26 @@ namespace NeoEducationSystem.Data.Seeders
 					TestId = 1,
 					Content = "В Java и C# какво представлява \"тернарният оператор\"?",
 				},
+				new Question
+				{
+					TestId = 1,
+					Content = "Кой цикъл е най-правилно да използваме, ако знаем точно колко пъти ще се изпълни?",
+				},
+				new Question
+				{
+					TestId = 1,
+					Content = "Как можем да излезем от цикъл в C# и Java, ако се изпълнява определено условие?",
+				},
+				new Question
+				{
+					TestId = 1,
+					Content = "Какво прави операторът \"continue\" в цикъл в Java и C#?"
+				},
+				new Question
+				{
+					TestId = 1,
+					Content = "С кой вложен цикъл е най-правилно да се обходи многомерен масив?"
+				}
 			});
 
 			await context.SaveChangesAsync();

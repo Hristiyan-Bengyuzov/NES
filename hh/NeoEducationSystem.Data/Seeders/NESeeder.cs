@@ -13,6 +13,9 @@
 				new CourseSeeder(),
 				new LessonSeeder(),
 				new ParagraphSeeder(),
+				new TestSeeder(),
+				new QuestionSeeder(),
+				new AnswerSeeder(),
 				new CodeSnippetSeeder(),
 			};
 

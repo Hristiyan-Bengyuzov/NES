@@ -129,7 +129,7 @@ namespace NeoEducationSystem.Data.Seeders
 				{
 					QuestionId = 6,
 					Content = "Съкращение за израз \"if-else\"",
-					IsCorrect= true,
+					IsCorrect = true,
 				},
 				new Answer
 				{
@@ -140,6 +140,94 @@ namespace NeoEducationSystem.Data.Seeders
 				{
 					QuestionId = 6,
 					Content = "Алтернатива на switch",
+				},
+
+				new Answer
+				{
+					QuestionId = 7,
+					Content = "for",
+					IsCorrect = true,
+				},
+				new Answer
+				{
+					QuestionId = 7,
+					Content = "while",
+				},
+				new Answer
+				{
+					QuestionId = 7,
+					Content = "do while",
+				},
+				new Answer
+				{
+					QuestionId = 7,
+					Content = "foreach",
+				},
+
+				new Answer
+				{
+					QuestionId = 8,
+					Content = "exit",
+				},
+				new Answer
+				{
+					QuestionId = 8,
+					Content = "continue",
+				},
+				new Answer
+				{
+					QuestionId = 8,
+					Content = "return",
+				},
+				new Answer
+				{
+					QuestionId = 8,
+					Content = "break",
+					IsCorrect = true,
+				},
+
+				new Answer
+				{
+					QuestionId = 9,
+					Content = "Прекъсва изпълнението на целия цикъл",
+				},
+				new Answer
+				{
+					QuestionId = 9,
+					Content = "Минава на следващата итерация на цикъла",
+					IsCorrect = true,
+				},
+				new Answer
+				{
+					QuestionId = 9,
+					Content = "Връща стойност от цикъла",
+				},
+				new Answer
+				{
+					QuestionId = 9,
+					Content = "Генерира изключение",
+				},
+
+				new Answer
+				{
+					QuestionId = 10,
+					Content = "while",
+				},
+				new Answer
+				{
+					QuestionId = 10,
+					Content = "do while",
+				},
+				new Answer
+				{
+					QuestionId = 10,
+					Content = "for",
+					IsCorrect = true,
+				},
+				new Answer
+				{
+					QuestionId = 10,
+					Content = "foreach",
 				},
 			});
 		}
