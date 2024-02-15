@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using NeoEducationSystem.Data;
 using NeoEducationSystem.Data.Models;
 using NeoEducationSystem.Data.Seeders;
+using NeoEducationSystem.Services.Data.CodeSnippets;
 using NeoEducationSystem.Services.Data.Courses;
 using NeoEducationSystem.Services.Data.Images;
 using NeoEducationSystem.Services.Data.Jwt;
@@ -51,6 +52,7 @@ builder.Services.AddTransient<ILessonService, LessonService>();
 builder.Services.AddTransient<IThreadService, ThreadService>();
 builder.Services.AddTransient<ITestService, TestService>();
 builder.Services.AddTransient<IParagraphService, ParagraphService>();
+builder.Services.AddTransient<ICodeSnippetService, CodeSnippetService>();
 builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 builder.Services.AddCors(options =>
 {

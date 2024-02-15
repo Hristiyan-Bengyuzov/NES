@@ -28,7 +28,8 @@ const LessonInfo = () => {
 
     const logoMap = {
         csharp: 'csharplogo.png',
-        java: 'javalogo.png'
+        java: 'javalogo.png',
+        sql: 'sqllogo.png'
     };
 
     if (loading) {

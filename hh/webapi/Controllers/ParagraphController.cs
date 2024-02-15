@@ -26,5 +26,19 @@ namespace webapi.Controllers
 				return StatusCode(500);
 			}
 		}
+
+		[HttpGet("getLessonParagrahs/{lessonId}")]
+		public async Task<ActionResult<IEnumerable<ParagraphTableDTO>>> GetLessonParagraphs(int lessonId)
+		{
+			try
+			{
+				var paragraphTable = await _paragraphService.GetParagraphsTable(lessonId);
+				return Ok(paragraphTable);
+			}
+			catch (Exception)
+			{
+				return StatusCode(500);
+			}
+		}
 	}
 }

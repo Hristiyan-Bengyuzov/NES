@@ -1,4 +1,5 @@
-﻿using NeoEducationSystem.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using NeoEducationSystem.Data;
 using NeoEducationSystem.Data.Models;
 using NeoEducationSystem.Web.DTOs.Paragraphs;
 
@@ -20,6 +21,21 @@ namespace NeoEducationSystem.Services.Data.Paragraphs
 				}));
 
 			await _context.SaveChangesAsync();
+		}
+
+		public async Task<IEnumerable<ParagraphTableDTO>> GetParagraphsTable(int lessonId)
+		{
+			var paragraphsTable = await _context.Lessons
+				.Where(l => l.Id == lessonId)
+				.Include(l => l.Paragraphs)
+				.Select(l => l.Paragraphs.Select(p => new ParagraphTableDTO
+				{
+					Id = p.Id,
+					Content = p.Content
+				}))
+				.FirstAsync();
+
+			return paragraphsTable;
 		}
 	}
 }
