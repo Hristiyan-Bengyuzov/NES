@@ -16,6 +16,7 @@ import ForumsPage from './pages/ForumsPage.js';
 import Thread from './components/Thread.js';
 import ThreadPage from './pages/ThreadPage.js';
 import AdminMenu from './components/AdminMenu.js';
+import Quiz from './components/Quiz.js';
 
 const App = () => {
 
@@ -38,6 +39,7 @@ const App = () => {
                     <Route path="/threadTest" element={<ThreadForm />} />
                     <Route path="/thread/:threadId" element={<ThreadPage />} />
                     <Route path="/admin" element={<AdminMenu />} />
+                    <Route path="/test/:testId" element={<Quiz />} />
                     <Route path="*" element={<NoPage />} />
                 </Routes>
             </BrowserRouter>
