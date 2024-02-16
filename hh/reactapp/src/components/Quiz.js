@@ -3,6 +3,7 @@ import { Card, Button, Radio } from 'antd';
 import { API_URL } from '../common/GlobalConstants';
 import axios from 'axios';
 import Loading from './Loading';
+import '../styles/Quiz.css';
 
 const Quiz = () => {
     const [quizData, setQuizData] = useState({});
@@ -38,26 +39,27 @@ const Quiz = () => {
     }
 
     return (
-        <Card title={quizData.title}>
+        <div className='quiz-container'>
+            <div className='quiz-title'>{quizData.title}</div>
             {quizData.questions.map((question, questionIndex) => (
-                <div key={question.id} style={{ marginBottom: '20px' }}>
+                <div key={question.id} className='qstn-container'>
                     <p>{question.content}</p>
                     <Radio.Group
                         onChange={(e) => handleAnswerSelection(questionIndex, e.target.value)}
                         value={selectedAnswers[questionIndex]}
                     >
                         {question.answers.map((answer) => (
-                            <Radio key={answer.id} value={answer.id}>
+                            <Radio key={answer.id} value={answer.id} className='radio-test'>
                                 {answer.content}
                             </Radio>
                         ))}
                     </Radio.Group>
                 </div>
             ))}
-            <Button type="primary" onClick={() => console.log(selectedAnswers)}>
-                Submit Answers
-            </Button>
-        </Card>
+            <div className='quiz-button' onClick={() => console.log(selectedAnswers)}>
+            &#62;Приключи теста&#60;
+            </div>
+        </div>
     );
 };
 
