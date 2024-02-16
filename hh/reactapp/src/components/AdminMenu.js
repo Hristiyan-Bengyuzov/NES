@@ -81,7 +81,7 @@ const AdminMenu = () => {
     const handleParagraphChange = (index, value) => {
         const updatedParagraphs = [...lessonParagraphs];
         updatedParagraphs[index] = value;
-        setParagraphCodeSnippets(updatedParagraphs);
+        setLessonParagraphs(updatedParagraphs);
     };
 
     const addParagraph = () => {
