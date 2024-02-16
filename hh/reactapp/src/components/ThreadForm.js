@@ -8,11 +8,11 @@ import { useState } from 'react';
 const ThreadForm = ({ parentId = '', buttonShow = true, onReply }) => {
 
     function getUserIdFromJwtPayload(jwt) {
-        const base64Url = jwt.split('.')[1]; // Get the second part of the JWT
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/'); // Replace URL safe characters
-        const payload = atob(base64); // Decode Base64 using atob
-        const jsonPayload = JSON.parse(payload); // Parse JSON string
-        return jsonPayload.userId; // Return the userId from the parsed JSON
+        const base64Url = jwt.split('.')[1]; 
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/'); 
+        const payload = atob(base64); 
+        const jsonPayload = JSON.parse(payload); 
+        return jsonPayload.userId; 
     }
 
     const [opacity, setOpacity] = useState(buttonShow ? 0 : 1);
