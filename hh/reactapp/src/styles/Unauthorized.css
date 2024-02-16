@@ -1,0 +1,63 @@
+.skeleton-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.the-rattler {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.left-container,
+.right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nuh-uh-wrapper {
+    width: 600px;
+    height: 450px;
+}
+
+.nuh-uh-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mewing-riff-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mewing-riff-wrapper {
+    width: 275px;
+    height: 300px;
+}
+
+.twerking-wrapper {
+    width: 400px;
+    height: 250px;
+}
+
+.long-gif {
+    height: 500px;
+    width: 400px;
+}
+
+.twerking-wrapper:hover,
+.long-gif:hover,
+.nuh-uh-wrapper:hover,
+.mewing-riff-wrapper:hover,
+.twerking-wrapper:hover {
+    cursor: pointer;
+}
+
+.unauthorized {
+    font-family: 'Pixel';
+    color: crimson;
+}
