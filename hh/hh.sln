@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoEducationSystem.Data.Mod
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B6293F03-9860-4690-B088-E23343EB9100}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoEducationSystem.Services.Data", "NeoEducationSystem.Services.Data\NeoEducationSystem.Services.Data.csproj", "{9AB65E7E-A6AC-4A13-91E5-6A4ECF756947}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoEducationSystem.Services.Data", "NeoEducationSystem.Services.Data\NeoEducationSystem.Services.Data.csproj", "{9AB65E7E-A6AC-4A13-91E5-6A4ECF756947}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoEducationSystem.Web.DTOs", "NeoEducationSystem.Web.DTOs\NeoEducationSystem.Web.DTOs.csproj", "{FBBC99BE-369F-4700-A118-EA9504DB910B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoEducationSystem.Web.DTOs", "NeoEducationSystem.Web.DTOs\NeoEducationSystem.Web.DTOs.csproj", "{FBBC99BE-369F-4700-A118-EA9504DB910B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

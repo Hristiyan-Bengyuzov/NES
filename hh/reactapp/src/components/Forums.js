@@ -5,6 +5,7 @@ import axios from "axios";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
 import ThreadForm from "./ThreadForm";
+import { redirectUserUnauthorized } from "../utilities/authorizationHelper";
 
 const Forums = () => {
   const [threads, setThreads] = useState([]);
@@ -26,6 +27,7 @@ const Forums = () => {
   }
 
   useEffect(() => {
+
     fetchThreads();
   }, []);
 

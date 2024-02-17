@@ -5,6 +5,7 @@ import axios from 'axios';
 import { API_URL } from '../common/GlobalConstants';
 import "../styles/LogInForm.css";
 import { useNavigate } from 'react-router-dom';
+import { isAdmin } from '../utilities/authorizationHelper';
 
 const LogInForm = () => {
   const navigate = useNavigate();
@@ -28,7 +29,8 @@ const LogInForm = () => {
         .then(response => {
           console.log('Response:', response.data);
           sessionStorage.setItem('token', response.data.token);
-          navigate('/home');
+          
+          navigate(isAdmin() ? '/admin' : '/home');
         })
         .catch(error => {
           if (error.response && error.response.status === 401) {

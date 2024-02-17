@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NeoEducationSystem.Data.Models\NeoEducationSystem.Data.Models.csproj" />
+    <ProjectReference Include="..\NeoEducationSystem.Data\NeoEducationSystem.Data.csproj" />
+  </ItemGroup>
+
+</Project>

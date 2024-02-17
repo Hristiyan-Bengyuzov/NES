@@ -9,6 +9,7 @@ using NeoEducationSystem.Data.Seeders;
 using NeoEducationSystem.Services.Data.CodeSnippets;
 using NeoEducationSystem.Services.Data.Courses;
 using NeoEducationSystem.Services.Data.Images;
+using NeoEducationSystem.Services.Data.IUserRoles;
 using NeoEducationSystem.Services.Data.Jwt;
 using NeoEducationSystem.Services.Data.Lessons;
 using NeoEducationSystem.Services.Data.Paragraphs;
@@ -55,6 +56,7 @@ builder.Services.AddTransient<ITestService, TestService>();
 builder.Services.AddTransient<IParagraphService, ParagraphService>();
 builder.Services.AddTransient<ICodeSnippetService, CodeSnippetService>();
 builder.Services.AddTransient<ITestResultService, TestResultService>();
+builder.Services.AddTransient<IUserRoleService, UserRoleService>();
 builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 builder.Services.AddCors(options =>
 {

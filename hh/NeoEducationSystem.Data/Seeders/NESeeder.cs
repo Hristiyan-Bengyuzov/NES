@@ -10,6 +10,8 @@
 
 			var seeders = new List<ISeeder>
 			{
+				new RoleSeeder(),
+				new AdminSeeder(),
 				new CourseSeeder(),
 				new LessonSeeder(),
 				new ParagraphSeeder(),

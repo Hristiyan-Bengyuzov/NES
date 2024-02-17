@@ -4,10 +4,13 @@ import { MenuFoldOutlined, MenuUnfoldOutlined, UploadOutlined, UserOutlined, Boo
 import { Layout, Menu, Button, Modal, Form, Input, Select, Table, theme, ConfigProvider } from 'antd';
 import { API_URL } from '../common/GlobalConstants';
 import axios from 'axios';
+import { isAdmin } from '../utilities/authorizationHelper';
+import { useNavigate } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
 
 const AdminMenu = () => {
+    const navigate = useNavigate();
     const courses = [
         { id: '1', title: 'Основни знания' },
         { id: '2', title: 'ООП' },
@@ -144,6 +147,12 @@ const AdminMenu = () => {
             console.error('Error fetching paragraphs:', error);
         }
     };
+
+    useEffect(() => {
+        if (!isAdmin()) {
+            navigate('/unauthorized');
+        }
+    }, []);
 
     return (
         <ConfigProvider theme={config}>
