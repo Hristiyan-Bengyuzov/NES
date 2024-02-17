@@ -46,3 +46,28 @@
   font-size: 80px;
   line-height: 30px;
 }
+
+.courses-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-button-courses{
+  display: flex;
+  justify-content: center;
+  color: #101010;
+  background-color: #ee4542;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  max-width: 70px;
+  font-family: "Pixel";
+  border: 2px solid #101010;
+  text-decoration: none;
+}
+
+.quiz-button-courses:hover{
+  cursor: pointer;
+}

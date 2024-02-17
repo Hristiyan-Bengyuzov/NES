@@ -32,6 +32,7 @@ const CoursesMenu = () => {
     <div className="background">
       <div className="LMcontainer">
         {courses.map(course => (
+          <div className="courses-container">
           <Link
             to={`/course/${course.id}`}
             className={`${course.styles}`}
@@ -43,6 +44,8 @@ const CoursesMenu = () => {
               <p>{course.title}</p>
             </div>
           </Link>
+          <Link to={`/test/1`} className='quiz-button-courses'>&#62;Тест&#60;</Link>
+          </div>
         ))}
       </div>
     </div>

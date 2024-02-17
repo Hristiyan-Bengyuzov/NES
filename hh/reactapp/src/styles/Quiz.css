@@ -59,6 +59,7 @@
   border-radius: 5px;
   padding: 10px 20px 10px 20px;
   margin-top: 20px;
+  border: 2px solid #101010;
 }
 
 .quiz-button:hover{
