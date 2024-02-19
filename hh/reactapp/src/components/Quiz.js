@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { useParams } from 'react-router-dom';
 import { getToken } from '../utilities/authorizationHelper';
+import useReturnUrl from '../utilities/useReturnUrl.js'
 
 const Quiz = () => {
     const { testId } = useParams();
@@ -16,6 +17,7 @@ const Quiz = () => {
     const [loading, setLoading] = useState(true);
     const [selectedAnswers, setSelectedAnswers] = useState([]);
     const [isCorrectArray, setIsCorrectArray] = useState([]);
+    const { redirectToLoginIfNotAuth } = useReturnUrl();
 
     function getUserIdFromJwtPayload(jwt) {
         const base64Url = jwt.split('.')[1];
@@ -62,6 +64,11 @@ const Quiz = () => {
     };
 
     const handleTestPost = () => {
+        if (!getToken()) {
+            redirectToLoginIfNotAuth();
+            return;
+        }
+
         const points = isCorrectArray.filter(c => c).length;
 
         const payload = {
@@ -69,7 +76,7 @@ const Quiz = () => {
             testId: testId,
             points: points
         };
-        
+
         Swal.fire({
             title: "Браво машина!",
             text: `Изкара ${points}/${quizData.questions.length}`,
@@ -78,7 +85,6 @@ const Quiz = () => {
             color: "#fff",
             iconColor: "#FF00FF",
             confirmButtonColor: "#ee4542"
-
         })
             .then(result => {
                 if (result.isConfirmed || result.isDismissed) {

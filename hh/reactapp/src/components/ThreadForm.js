@@ -4,15 +4,17 @@ import axios from 'axios';
 import { API_URL } from '../common/GlobalConstants';
 import { getToken } from '../utilities/authorizationHelper';
 import { useState } from 'react';
+import useReturnUrl from '../utilities/useReturnUrl';
 
 const ThreadForm = ({ parentId = '', buttonShow = true, onReply }) => {
+    const { redirectToLoginIfNotAuth } = useReturnUrl();
 
     function getUserIdFromJwtPayload(jwt) {
-        const base64Url = jwt.split('.')[1]; 
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/'); 
-        const payload = atob(base64); 
-        const jsonPayload = JSON.parse(payload); 
-        return jsonPayload.userId; 
+        const base64Url = jwt.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const payload = atob(base64);
+        const jsonPayload = JSON.parse(payload);
+        return jsonPayload.userId;
     }
 
     const [opacity, setOpacity] = useState(buttonShow ? 0 : 1);
@@ -42,6 +44,8 @@ const ThreadForm = ({ parentId = '', buttonShow = true, onReply }) => {
                 }),
         }),
         onSubmit: (values) => {
+            redirectToLoginIfNotAuth();
+
             const userId = getUserIdFromJwtPayload(getToken());
 
             const formData = new FormData();
@@ -51,7 +55,7 @@ const ThreadForm = ({ parentId = '', buttonShow = true, onReply }) => {
             formData.append('userId', userId);
             formData.append('parentId', parentId);
 
-            
+
             for (const pair of formData.entries()) {
                 console.log(`${pair[0]}    ${pair[1]}`);
             }
@@ -61,13 +65,13 @@ const ThreadForm = ({ parentId = '', buttonShow = true, onReply }) => {
                     'Content-Type': 'multipart/form-data',
                 },
             })
-            .then(response => {
-                // callback function to update shit on the page
-                onReply();
-                console.log('Response:', response.data);
-            })
-            .catch(error => {
-                console.log(error);
+                .then(response => {
+                    // callback function to update shit on the page
+                    onReply();
+                    console.log('Response:', response.data);
+                })
+                .catch(error => {
+                    console.log(error);
                 });
         },
     });

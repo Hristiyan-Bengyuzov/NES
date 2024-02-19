@@ -6,9 +6,11 @@ import { API_URL } from '../common/GlobalConstants';
 import "../styles/LogInForm.css";
 import { useNavigate } from 'react-router-dom';
 import { isAdmin } from '../utilities/authorizationHelper';
+import useReturnUrl from '../utilities/useReturnUrl.js';
 
 const LogInForm = () => {
   const navigate = useNavigate();
+  const { redirectToStoredUrl } = useReturnUrl();
 
   const formik = useFormik({
     initialValues: {
@@ -29,8 +31,12 @@ const LogInForm = () => {
         .then(response => {
           console.log('Response:', response.data);
           sessionStorage.setItem('token', response.data.token);
-          
-          navigate(isAdmin() ? '/admin' : '/home');
+
+          redirectToStoredUrl();
+
+          if (isAdmin()) {
+            navigate('/admin');
+          }
         })
         .catch(error => {
           if (error.response && error.response.status === 401) {
