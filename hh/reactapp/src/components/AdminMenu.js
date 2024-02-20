@@ -73,6 +73,8 @@ const AdminMenu = () => {
 
         axios.post(API_URL + '/api/CodeSnippet/createCodeSnippets', payload)
             .then(response => console.log(response.data));
+
+        toggleModalVisibility('codeSnippet');
     };
 
     const removeCodeSnippet = (index) => {
