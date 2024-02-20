@@ -18,6 +18,7 @@ import ThreadPage from './pages/ThreadPage.js';
 import AdminMenu from './components/AdminMenu.js';
 import Quiz from './components/Quiz.js';
 import Unauthorized from './components/Unauthorized.js';
+import Statistics from './components/Statistics.js';
 
 const App = () => {
 
@@ -42,6 +43,7 @@ const App = () => {
                     <Route path="/admin" element={<AdminMenu />} />
                     <Route path="/test/:testId" element={<Quiz />} />
                     <Route path="/unauthorized" element={<Unauthorized />} />
+                    <Route path="/statistics" element={<Statistics />} />
                     <Route path="*" element={<NoPage />} />
                 </Routes>
             </BrowserRouter>

@@ -63,34 +63,59 @@ const Quiz = () => {
         return false;
     };
 
-    const handleTestPost = () => {
+    const handleTestPost = async () => {
         if (!getToken()) {
             redirectToLoginIfNotAuth();
             return;
         }
 
-        const points = isCorrectArray.filter(c => c).length;
-
-        const payload = {
+        const hasDoneTestPayload = {
             userId: getUserIdFromJwtPayload(getToken()),
-            testId: testId,
-            points: points
+            testId: testId
         };
 
-        Swal.fire({
-            title: "Браво машина!",
-            text: `Изкара ${points}/${quizData.questions.length}`,
-            backdrop: "rgba(0,0,0,0.8)",
-            background: "#000000 url(https://t3.ftcdn.net/jpg/01/02/64/28/360_F_102642850_Mca9lTRDH60DQin39YwCF5Jzd15lcdoo.jpg)",
-            color: "#fff",
-            iconColor: "#FF00FF",
-            confirmButtonColor: "#ee4542"
-        })
-            .then(result => {
-                if (result.isConfirmed || result.isDismissed) {
-                    axios.post(API_URL + '/api/TestResult/createTestResult', payload)
-                        .then(response => console.log(response.data));
-                    navigate('/courses');
+        axios.post(API_URL + '/api/TestResult/hasDoneTest', hasDoneTestPayload)
+            .then(res => {
+                if (res.data) {
+                    Swal.fire({
+                        title: "Вече си правил този тест!",
+                        text: `Резултатът ти няма да се запази`,
+                        backdrop: "rgba(0,0,0,0.8)",
+                        background: "#000000 url(https://t3.ftcdn.net/jpg/01/02/64/28/360_F_102642850_Mca9lTRDH60DQin39YwCF5Jzd15lcdoo.jpg)",
+                        color: "#fff",
+                        iconColor: "#FF00FF",
+                        confirmButtonColor: "#ee4542"
+                    })
+                        .then(result => {
+                            if (result.isConfirmed || result.isDismissed) {
+                                navigate('/statistics');
+                            }
+                        });
+                } else {
+                    const points = isCorrectArray.filter(c => c).length;
+
+                    const payload = {
+                        userId: getUserIdFromJwtPayload(getToken()),
+                        testId: testId,
+                        points: points
+                    };
+
+                    Swal.fire({
+                        title: "Браво машина!",
+                        text: `Изкара ${points}/${quizData.questions.length}`,
+                        backdrop: "rgba(0,0,0,0.8)",
+                        background: "#000000 url(https://t3.ftcdn.net/jpg/01/02/64/28/360_F_102642850_Mca9lTRDH60DQin39YwCF5Jzd15lcdoo.jpg)",
+                        color: "#fff",
+                        iconColor: "#FF00FF",
+                        confirmButtonColor: "#ee4542"
+                    })
+                        .then(result => {
+                            if (result.isConfirmed || result.isDismissed) {
+                                axios.post(API_URL + '/api/TestResult/createTestResult', payload)
+                                    .then(response => console.log(response.data));
+                                navigate('/statistics');
+                            }
+                        });
                 }
             });
     };
