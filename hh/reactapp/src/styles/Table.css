@@ -1,0 +1,9 @@
+.test-results .ant-table-thead .ant-table-cell {
+  background-color: #ee4542 !important;
+  font-family: "Arial";
+}
+
+.test-results{
+  background-color: #ee4542;
+  height: 100vh;
+}

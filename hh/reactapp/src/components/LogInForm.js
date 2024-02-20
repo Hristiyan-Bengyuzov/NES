@@ -56,7 +56,7 @@ const LogInForm = () => {
         <form onSubmit={formik.handleSubmit}>
           <div>
             <label htmlFor="email" className='LR-letters'>Email:</label>
-            <input className="LR-input-field"
+            <input className="input-style"
               type="text"
               id="email"
               name="email"
@@ -70,7 +70,7 @@ const LogInForm = () => {
           </div>
           <div>
             <label htmlFor="password" className='LR-letters' >Парола:</label>
-            <input className="LR-input-field"
+            <input className="input-style"
               type="password"
               id="password"
               name="password"
@@ -83,7 +83,7 @@ const LogInForm = () => {
             )}
           </div>
           <div>
-            <button type="submit" className="LR-submit">Влезни</button>
+            <button type="submit" className='quiz-button LR-submit'>&#62;Влезни&#60;</button>
           </div>
         </form>
       </div>

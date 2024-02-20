@@ -60,6 +60,7 @@ const RegisterForm = () => {
                     <div>
                         <label htmlFor="username" className='LR-letters'>Име:</label>
                         <input
+                        className='input-style'
                             type="text"
                             id="username"
                             name="username"
@@ -74,6 +75,7 @@ const RegisterForm = () => {
                     <div>
                         <label htmlFor="email" className='LR-letters'>Email:</label>
                         <input
+                        className='input-style'
                             type="text"
                             id="email"
                             name="email"
@@ -87,7 +89,7 @@ const RegisterForm = () => {
                     </div>
                     <div>
                         <label htmlFor="password" className='LR-letters'>Парола:</label>
-                        <input
+                        <input className='input-style'
                             type="password"
                             id="password"
                             name="password"
@@ -100,7 +102,7 @@ const RegisterForm = () => {
                         )}
                     </div>
                     <div>
-                        <button type="submit">Регистрирай се</button>
+                        <button type="submit" className='quiz-button LR-submit'>&#62;Регистрирай се&#60;</button>
                     </div>
                 </form>
             </div>
