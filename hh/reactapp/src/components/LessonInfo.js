@@ -5,6 +5,7 @@ import axios from "axios";
 import Loading from "./Loading";
 import CodeSnippet from "./CodeSnippet";
 import "../styles/LessonInfo.css";
+import NavBar from '../components/Navbar.js';
 
 const LessonInfo = () => {
     const [lessonInfo, setLessonInfo] = useState({});
@@ -38,6 +39,7 @@ const LessonInfo = () => {
 
     return (
         <>
+            <NavBar/>
             <div className="titlecard">{lessonInfo.title}</div>
             <div className="paragraphs-container">
                 {lessonInfo.paragraphs.map(paragraph => {
