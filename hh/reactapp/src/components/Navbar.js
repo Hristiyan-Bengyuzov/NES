@@ -1,11 +1,11 @@
 import { Menu } from 'antd';
-import { HomeOutlined, UserOutlined, BookOutlined, BarsOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined, BookOutlined, BarsOutlined, LogoutOutlined, LoginOutlined } from '@ant-design/icons';
 import { ConfigProvider } from 'antd';
-import { isAdmin } from '../utilities/authorizationHelper';
-import { Link } from 'react-router-dom';
+import { getToken, isAdmin } from '../utilities/authorizationHelper';
+import { Link, useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
-
+  const navigate = useNavigate();
   const config = {
     token: {
       colorPrimary: "#b02c2a",
@@ -46,6 +46,27 @@ const NavBar = () => {
             </Link>
           </Menu.Item>
         )}
+
+        {!getToken() ? (
+          <Menu.Item icon={<LoginOutlined />}
+            style={{ marginLeft: 'auto' }}
+          >
+            <Link to={`/login`}>
+              Влезни
+            </Link>
+          </Menu.Item>
+        ) : (
+          <Menu.Item icon={<LogoutOutlined />}
+            style={{ marginLeft: 'auto' }}
+            onClick={() => {
+              sessionStorage.removeItem('token');
+              navigate('/home');
+            }}
+          >
+            Излез
+          </Menu.Item>
+        )}
+
       </Menu>
     </ConfigProvider>
   );

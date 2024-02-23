@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { API_URL } from '../common/GlobalConstants';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const RegisterForm = () => {
     const navigate = useNavigate();
@@ -42,11 +42,11 @@ const RegisterForm = () => {
                         confirmButtonColor: "#ee4542"
 
                     })
-                    .then(result => {
-                        if (result.isConfirmed || result.isDismissed) {
-                            navigate('/login');
-                        }
-                    });
+                        .then(result => {
+                            if (result.isConfirmed || result.isDismissed) {
+                                navigate('/login');
+                            }
+                        });
                 })
                 .catch(error => {
                     console.error('Error:', error.message);
@@ -60,7 +60,7 @@ const RegisterForm = () => {
                     <div>
                         <label htmlFor="username" className='LR-letters'>Име:</label>
                         <input
-                        className='input-style'
+                            className='input-style'
                             type="text"
                             id="username"
                             name="username"
@@ -75,7 +75,7 @@ const RegisterForm = () => {
                     <div>
                         <label htmlFor="email" className='LR-letters'>Email:</label>
                         <input
-                        className='input-style'
+                            className='input-style'
                             type="text"
                             id="email"
                             name="email"
@@ -106,6 +106,12 @@ const RegisterForm = () => {
                     </div>
                 </form>
             </div>
+            <Link
+                to={'/login'}
+                style={{ textDecoration: 'none', color: 'rgb(228,228,228)', marginTop: '20px' }}
+            >
+                Вече имаш акаунт? Цъкни тук.
+            </Link>
         </div>
     );
 };

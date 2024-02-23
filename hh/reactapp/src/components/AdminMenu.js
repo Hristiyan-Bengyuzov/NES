@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/AdminMenu.css';
-import { MenuFoldOutlined, MenuUnfoldOutlined, UploadOutlined, UserOutlined, BookOutlined, EditOutlined, CodeOutlined } from '@ant-design/icons';
+import { MenuFoldOutlined, MenuUnfoldOutlined, UploadOutlined, UserOutlined, BookOutlined, EditOutlined, HomeOutlined, CodeOutlined } from '@ant-design/icons';
 import { Layout, Menu, Button, Modal, Form, Input, Select, Table, theme, ConfigProvider } from 'antd';
 import { API_URL } from '../common/GlobalConstants';
 import axios from 'axios';
@@ -35,6 +35,7 @@ const AdminMenu = () => {
         paragraph: false,
         codeSnippet: false,
     });
+    const [users, setUsers] = useState([]);
     const [lessons, setLessons] = useState([]);
     const [currentLesson, setCurrentLesson] = useState({});
     const [currentParagraph, setCurrentParagraph] = useState({});
@@ -43,7 +44,6 @@ const AdminMenu = () => {
     const [paragraphCodeSnippets, setParagraphCodeSnippets] = useState([
         { language: '', content: '' },
     ]);
-
     const handleCodeSnippetChange = (index, value) => {
         const updatedCodeSnippets = [...paragraphCodeSnippets];
         updatedCodeSnippets[index].content = value;
@@ -154,6 +154,17 @@ const AdminMenu = () => {
         if (!isAdmin()) {
             navigate('/unauthorized');
         }
+
+        const fetchUsers = async () => {
+            try {
+                const response = await axios.get(API_URL + `/api/TestResult/getStatistics`);
+                setUsers(response.data);
+            } catch (error) {
+                console.error('Error fetching users:', error);
+            }
+        };
+
+        fetchUsers();
     }, []);
 
     return (
@@ -168,7 +179,7 @@ const AdminMenu = () => {
                         selectedKeys={[selectedNav]}
                         onClick={({ key }) => handleMenuClick(key)}
                     >
-                        <Menu.Item key="1" icon={<UserOutlined />}>
+                        <Menu.Item key="1" icon={<UserOutlined />} >
                             Потребители
                         </Menu.Item>
                         <Menu.Item key="2" icon={<BookOutlined />}>
@@ -189,6 +200,18 @@ const AdminMenu = () => {
                                 fontSize: '16px',
                                 width: 64,
                                 height: 64,
+                            }}
+                        />
+                        <Button
+                            type="text"
+                            icon={<HomeOutlined />}
+                            onClick={() => navigate('/home')}
+                            style={{
+                                fontSize: '16px',
+                                width: 64,
+                                height: 64,
+                                float: 'right',
+                                marginLeft: 'auto'
                             }}
                         />
                         {selectedNav === '2' && (
@@ -229,6 +252,14 @@ const AdminMenu = () => {
                                         </Form.Item>
 
                                         <Form.Item
+                                            label="YouTube видео"
+                                            name="videoUrl"
+                                            rules={[{ pattern: /^https:\/\/www\.youtube\.com\/embed\/.{11}\?si=.{16}$/, message: 'Невалидно видео.' }]}
+                                        >
+                                            <Input />
+                                        </Form.Item>
+
+                                        <Form.Item
                                             label="Курс"
                                             name="courseId"
                                             rules={[{ required: true, message: 'Моля изберете курс' }]}
@@ -260,7 +291,17 @@ const AdminMenu = () => {
                         }}
                     >
                         {selectedNav === '1' && (
-                            <h2 style={{ color: '#e4e4e4' }}>Потребители:</h2>
+                            <>
+                                <h2 style={{ color: '#e4e4e4' }}>Потребители:</h2>
+                                <Table style={{ padding: 0, background: config.token.colorSecondary }}
+                                    dataSource={users}
+                                    pagination={false}
+                                    columns={[
+                                        { title: 'Име', dataIndex: 'userName', key: 'userName' },
+                                        { title: 'Общо точки', dataIndex: 'totalPoints', key: 'totalPoints' },
+                                    ]}
+                                />
+                            </>
                         )}
                         {selectedNav === '2' && (
                             <>

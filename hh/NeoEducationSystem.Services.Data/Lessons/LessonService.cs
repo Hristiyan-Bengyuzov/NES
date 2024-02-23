@@ -20,6 +20,7 @@ namespace NeoEducationSystem.Services.Data.Lessons
 				CourseId = lessonDTO.CourseId,
 				Title = lessonDTO.Title,
 				Description = lessonDTO.Description,
+				VideoUrl = lessonDTO.VideoUrl,
 			});
 
 			await _context.SaveChangesAsync();

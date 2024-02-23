@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { API_URL } from '../common/GlobalConstants';
 import "../styles/LogInForm.css";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { isAdmin } from '../utilities/authorizationHelper';
 import useReturnUrl from '../utilities/useReturnUrl.js';
 
@@ -87,6 +87,12 @@ const LogInForm = () => {
           </div>
         </form>
       </div>
+      <Link
+        to={'/register'}
+        style={{ textDecoration: 'none', color: 'rgb(228,228,228)', marginTop: '20px' }}
+      >
+        Нямаш акаунт? Цъкни тук.
+      </Link>
     </div>
   );
 };
