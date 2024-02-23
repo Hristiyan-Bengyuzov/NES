@@ -51,6 +51,7 @@ namespace NeoEducationSystem.Services.Data.Lessons
 					.Select(l => new LessonInfoDTO
 					{
 						Title = l.Title,
+						VideoUrl = l.VideoUrl,
 						Paragraphs = l.Paragraphs.Select(p => new ParagraphDTO
 						{
 							Id = p.Id,

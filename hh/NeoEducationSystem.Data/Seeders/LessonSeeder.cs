@@ -16,7 +16,8 @@ namespace NeoEducationSystem.Data.Seeders
 					CourseId = 1,
 					Title = "Типове данни",
 					Description = "Основни типове данни в програмирането",
-				},
+					VideoUrl = "https://www.youtube.com/embed/VDJB8F7kZoA?si=N-79jfKbU65rszZL"
+                },
 				new Lesson
 				{
 					CourseId = 1,

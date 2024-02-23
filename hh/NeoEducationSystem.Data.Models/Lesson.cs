@@ -16,6 +16,8 @@ public class Lesson
     [MaxLength(100)]
     public string Description { get; set; } = null!;
 
+    public string? VideoUrl { get; set; }
+
     [ForeignKey(nameof(Course))]
     public int CourseId { get; set; }
 

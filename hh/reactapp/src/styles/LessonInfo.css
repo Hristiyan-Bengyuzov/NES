@@ -36,3 +36,12 @@
 .SNIPPET-container{
   display: flex;
 }
+
+.lesson-video{
+  display: block;
+  margin: 30px auto;
+  border: 25px solid;
+  border-radius: 50px;
+  border-image: url(https://imgur.com/U7m9WXl.png) 33 round;
+  background-color: rgb(16, 16, 16);
+}
