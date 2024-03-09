@@ -1,8 +1,11 @@
 import { Menu } from 'antd';
-import { HomeOutlined, UserOutlined, BookOutlined, BarsOutlined, LogoutOutlined, LoginOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined, BookOutlined, BarsOutlined, LogoutOutlined, LoginOutlined, PlayCircleOutlined } from '@ant-design/icons';
 import { ConfigProvider } from 'antd';
 import { getToken, isAdmin } from '../utilities/authorizationHelper';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import stillbg from '../images/stillbg.jpg';
+import bg1 from '../images/site-background1.gif';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -16,6 +19,18 @@ const NavBar = () => {
       colorBgContainer: "#101010",
     },
   };
+
+  const [paused, setPaused] = useState(true);
+
+  const changeBg = () => {
+    let body = document.querySelector('body')
+    if (paused) {
+      body.style.backgroundImage = `url(${stillbg})`;
+    } else {
+      body.style.backgroundImage = `url(${bg1})`;
+    }
+    setPaused(!paused);
+  }
 
   return (
     <ConfigProvider theme={config}>
@@ -46,6 +61,11 @@ const NavBar = () => {
             </Link>
           </Menu.Item>
         )}
+
+        <Menu.Item icon={<PlayCircleOutlined />} onClick={changeBg}>
+          {/* click twice if it doesnt work lol */}
+          Фон
+        </Menu.Item>
 
         {!getToken() ? (
           <Menu.Item icon={<LoginOutlined />}
